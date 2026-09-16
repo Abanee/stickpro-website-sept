@@ -570,7 +570,7 @@
       var d = lbItemData[cat] || lbItemData["product-labels"];
       var labelEl = item.querySelector(".gallery-item-label");
       var tagEl = item.querySelector(".gallery-item-tag");
-      var svgEl = item.querySelector(".gallery-img-inner svg");
+      var mediaEl = item.querySelector(".gallery-img-inner img") || item.querySelector(".gallery-img-inner svg");
 
       if (document.getElementById("lbTag")) document.getElementById("lbTag").textContent = d.tag;
       if (document.getElementById("lbTitle")) document.getElementById("lbTitle").textContent = labelEl ? labelEl.textContent : "Print Project";
@@ -580,8 +580,8 @@
       if (document.getElementById("lbEnv")) document.getElementById("lbEnv").textContent = d.env;
 
       var lbVisual = document.getElementById("lbVisual");
-      if (lbVisual && svgEl) {
-        var clone = svgEl.cloneNode(true);
+      if (lbVisual && mediaEl) {
+        var clone = mediaEl.cloneNode(true);
         lbVisual.innerHTML = "";
         lbVisual.appendChild(clone);
       }
