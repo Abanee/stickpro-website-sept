@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account — StickPro Custom Stickers &amp; Labels</title>
+  <meta name="description" content="Sign up for StickPro to start ordering custom stickers, die-cut labels, packaging seals, and get instant digital proofs.">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body class="auth-body">
+
+  <!-- Floating Utility Controls (Theme & Direction Toggle) -->
+  <div class="auth-quick-utils">
+    <button class="header-util-btn theme-toggle" id="authThemeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+      <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="header-util-btn dir-toggle" id="authDirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+      <span class="dir-toggle-text">RTL</span>
+    </button>
+  </div>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+
+      <!-- Logo + Typography (Clicks redirect to Home Page) -->
+      <a href="index.html" class="auth-brand" title="Return to StickPro Home">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+          <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+        </svg>
+        <span class="auth-brand-text">
+          <span class="auth-brand-name">StickPro</span>
+          <span class="auth-brand-tag">Custom Stickers &amp; Labels</span>
+        </span>
+      </a>
+
+      <!-- Welcome Heading & Subtitle -->
+      <div class="auth-header">
+        <h1 class="auth-title">Create your account</h1>
+        <p class="auth-subtitle">Join StickPro to design, proof, and print custom stickers and labels.</p>
+      </div>
+
+      <!-- Sign Up Form -->
+      <form class="auth-form" id="signupForm" novalidate>
+        
+        <!-- Full Name Input -->
+        <div class="form-group">
+          <label for="signupName">Full name</label>
+          <div class="auth-input-wrap">
+            <input 
+              type="text" 
+              id="signupName" 
+              name="name" 
+              class="auth-input" 
+              placeholder="Your full name" 
+              required 
+              autocomplete="name"
+            >
+          </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group">
+          <label for="signupEmail">Work or personal email</label>
+          <div class="auth-input-wrap">
+            <input 
+              type="email" 
+              id="signupEmail" 
+              name="email" 
+              class="auth-input" 
+              placeholder="you@example.com" 
+              required 
+              autocomplete="email"
+            >
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="auth-input-wrap">
+            <input 
+              type="password" 
+              id="signupPassword" 
+              name="password" 
+              class="auth-input auth-input-has-icon" 
+              placeholder="Create a strong password (8+ characters)" 
+              required 
+              autocomplete="new-password"
+            >
+            <button type="button" class="auth-pw-toggle" id="toggleSignupPassword" aria-label="Toggle password visibility" title="Show or hide password">
+              <!-- Eye Icon (Show) -->
+              <svg class="pw-eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <!-- Eye Slash Icon (Hide) -->
+              <svg class="pw-eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terms Agreement -->
+        <div class="auth-terms-text">
+          <label class="auth-checkbox-label">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+            <span>I agree to StickPro's <a href="contact.html">Terms of Service</a> and <a href="contact.html">Privacy Policy</a>.</span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-auth-submit" id="signupSubmitBtn">
+          <span>Create Account</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+      </form>
+
+      <!-- Divider -->
+      <div class="auth-divider">
+        <span>or continue with</span>
+      </div>
+
+      <!-- Third-Party Login Options (Real Google & Apple Logos) -->
+      <div class="social-auth-grid">
+        
+        <!-- Google Sign Up -->
+        <button type="button" class="btn-social btn-social-google" aria-label="Sign up with Google">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.97 0 12s.45 3.84 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <!-- Apple Sign Up -->
+        <button type="button" class="btn-social btn-social-apple" aria-label="Sign up with Apple">
+          <svg viewBox="0 0 170 170" width="19" height="19" fill="currentColor" aria-hidden="true">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.92-3.26-7.85-7.97-11.78-14.13-6.53-10.22-11.45-21.68-14.75-34.38-3.3-12.7-4.96-24.5-4.96-35.4 0-14.79 3.59-27.13 10.77-37.03 7.18-9.9 16.32-14.96 27.42-15.18 4.8 0 10.13 1.25 15.99 3.76 5.86 2.5 9.77 3.81 11.73 3.92 1.63 0 5.67-1.33 12.09-3.98 6.42-2.66 11.83-3.83 16.24-3.52 12.43.76 22.42 5.37 29.96 13.84-10.89 6.64-16.22 15.8-15.99 27.48.22 9.14 3.75 16.86 10.59 23.16 6.84 6.3 14.88 9.87 24.12 10.71-2.18 6.63-4.8 13.25-7.86 19.86zM119.22 31.84c0-7.39 2.67-14.35 8.01-20.88 5.34-6.53 11.97-10.51 19.89-11.96.22 1.2.33 2.28.33 3.26 0 7.39-2.78 14.47-8.34 21.23-5.55 6.76-12.3 10.66-20.24 11.7-.1-.98-.15-1.98-.15-3.01z"/>
+          </svg>
+          <span>Apple</span>
+        </button>
+
+      </div>
+
+      <!-- Redirection to Login Page -->
+      <div class="auth-switch">
+        <span>Already have an account?</span>
+        <a href="login.html">Log in</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // Password visibility toggle
+      var toggleBtn = document.getElementById("toggleSignupPassword");
+      var passwordInput = document.getElementById("signupPassword");
+      if (toggleBtn && passwordInput) {
+        var eyeOpen = toggleBtn.querySelector(".pw-eye-open");
+        var eyeClosed = toggleBtn.querySelector(".pw-eye-closed");
+
+        toggleBtn.addEventListener("click", function () {
+          var isPassword = passwordInput.getAttribute("type") === "password";
+          passwordInput.setAttribute("type", isPassword ? "text" : "password");
+          if (eyeOpen && eyeClosed) {
+            eyeOpen.style.display = isPassword ? "none" : "block";
+            eyeClosed.style.display = isPassword ? "block" : "none";
+          }
+        });
+      }
+
+      // Theme toggle functionality
+      var themeBtn = document.getElementById("authThemeToggle");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          var current = document.documentElement.getAttribute("data-theme") || "light";
+          var next = current === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          try { localStorage.setItem("stickpro-theme", next); } catch(e){}
+        });
+      }
+
+      // Direction toggle functionality
+      var dirBtn = document.getElementById("authDirToggle");
+      if (dirBtn) {
+        dirBtn.addEventListener("click", function () {
+          var current = document.documentElement.getAttribute("dir") || "ltr";
+          var next = current === "rtl" ? "ltr" : "rtl";
+          document.documentElement.setAttribute("dir", next);
+          try { localStorage.setItem("stickpro-direction", next); } catch(e){}
+        });
+      }
+
+      // Sign up form submission simulation
+      var form = document.getElementById("signupForm");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = document.getElementById("signupName").value.trim();
+          var email = document.getElementById("signupEmail").value.trim();
+          var password = document.getElementById("signupPassword").value;
+          var agree = document.getElementById("agreeTerms").checked;
+
+          if (!name || !email || !password) {
+            alert("Please complete all required fields.");
+            return;
+          }
+          if (password.length < 8) {
+            alert("Please provide a password of at least 8 characters.");
+            return;
+          }
+          if (!agree) {
+            alert("Please agree to the Terms of Service to create your account.");
+            return;
+          }
+
+          var btn = document.getElementById("signupSubmitBtn");
+          var originalContent = btn.innerHTML;
+          btn.innerHTML = '<span>Creating Account...</span>';
+          btn.disabled = true;
+
+          setTimeout(function () {
+            btn.innerHTML = originalContent;
+            btn.disabled = false;
+            alert("Welcome to StickPro, " + name + "! Your account has been created.");
+            window.location.href = "index.html";
+          }, 700);
+        });
+      }
+
+      // Social button actions
+      document.querySelectorAll(".btn-social").forEach(function(button) {
+        button.addEventListener("click", function() {
+          var provider = this.getAttribute("aria-label") || "third-party";
+          alert(provider + " registration connected. Welcome to StickPro!");
+          window.location.href = "index.html";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
