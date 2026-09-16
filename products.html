@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — StickPro Custom Stickers &amp; Labels</title>
+<meta name="description" content="Browse StickPro's full range of custom stickers and labels — product labels, barcode stickers, wall decals, die-cut and promotional stickers — and find the right fit for your job.">
+<link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+        <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+      </svg>
+      <span>StickPro<span class="logo-sub">Custom Stickers &amp; Labels</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="products.html" class="current">Products</a>
+      <a href="materials.html">Materials &amp; Finishes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-util-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="header-util-btn dir-toggle" id="dirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+      </button>
+
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="home2.html">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="products.html" class="current">Products</a>
+    <a href="materials.html">Materials &amp; Finishes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-nav-utils">
+      <button class="header-util-btn theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="util-label">Theme</span>
+      </button>
+      <button class="header-util-btn dir-toggle" id="dirToggleMobile" aria-label="Switch layout direction" title="Toggle direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+        <span class="util-label">Direction</span>
+      </button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================================ HERO =============================== -->
+<!-- Product-index hero: no illustration stage, no split panel — a confident
+     editorial statement plus a quick-facts strip. Deliberately different
+     from Home's split hero and Home 2's canvas hero. -->
+<section class="products-hero">
+  <div class="wrap">
+    <div class="products-hero-inner reveal">
+      <span class="kicker">What We Print</span>
+      <h1>Choose the Sticker That Fits the Job.</h1>
+      <p class="lede">Every application asks for something different. A bottle needs a label that survives condensation. A carton needs a barcode that scans first try. A storefront window needs vinyl that peels away clean. Below, we've broken down our core product lines by shape, material, finish and use — so you can match the right sticker to the right job before you upload a single file.</p>
+    </div>
+
+    <div class="hero-facts reveal">
+      <div class="hero-fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L21 7 V17 L12 22 L3 17 V7 Z"/></svg>
+        <span>7 product lines</span>
+      </div>
+      <div class="hero-fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 3 V21 M3 8 H21"/></svg>
+        <span>Custom shapes &amp; sizes</span>
+      </div>
+      <div class="hero-fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12 L11 15 L16 9"/></svg>
+        <span>Matte, gloss &amp; specialty finishes</span>
+      </div>
+      <div class="hero-fact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 L10 6 L14 16 L17 10 L20 20"/></svg>
+        <span>Adhesives for indoor, outdoor &amp; cold</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT NAVIGATION RAIL ===================== -->
+<nav class="product-nav-rail" aria-label="Jump to product type">
+  <div class="product-nav-track">
+    <a class="product-nav-item" href="#product-labels">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 9 H16 M8 13 H14"/></svg>
+      Product Labels
+    </a>
+    <a class="product-nav-item" href="#barcode-stickers">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M7 8 V16 M10 8 V16 M13 8 V16 M16 8 V16 M18.5 8 V16"/></svg>
+      Barcode Stickers
+    </a>
+    <a class="product-nav-item" href="#wall-decals">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4 H21 V20 H3 Z"/><path d="M8 20 C8 14 12 16 12 11 C12 7 9 6 8 4"/></svg>
+      Wall Decals
+    </a>
+    <a class="product-nav-item" href="#die-cut-stickers">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 C17 3 21 8 21 12 C21 17 17 21 12 21 C7 21 3 17 3 12 C3 8 7 3 12 3 Z" stroke-dasharray="2.4 2.4"/></svg>
+      Die-Cut Stickers
+    </a>
+    <a class="product-nav-item" href="#die-cut-stickers">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 15 L12 9 L15 15"/></svg>
+      Promotional Stickers
+    </a>
+    <a class="product-nav-item" href="#custom-promotional">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 L21 8.5 V15.5 L12 21 L3 15.5 V8.5 Z"/></svg>
+      Logo Stickers
+    </a>
+    <a class="product-nav-item" href="#custom-promotional">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4 C15 4 18 7 18 11 C18 16 14 19 12 20 C10 19 6 16 6 11 C6 7 9 4 12 4 Z"/></svg>
+      Custom Shape Labels
+    </a>
+  </div>
+</nav>
+
+<!-- ===================== PRODUCT CATALOG ===================== -->
+
+<!-- PRODUCT 1 — Product Labels — standard: image left, copy right -->
+<section class="product-row product-row--standard" id="product-labels">
+  <div class="wrap">
+    <div class="product-row-inner reveal">
+
+      <div class="product-figure">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="500" fill="#EEEAE0"/>
+          <ellipse cx="200" cy="430" rx="86" ry="14" fill="#DFD8C8"/>
+          <rect x="150" y="90" width="100" height="320" rx="22" fill="#FCFAF4" stroke="#17181A" stroke-width="2"/>
+          <rect x="150" y="90" width="100" height="60" rx="22" fill="#DDEAE3"/>
+          <rect x="168" y="188" width="64" height="96" rx="4" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <text x="200" y="222" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="14" fill="#17181A">HONEST</text>
+          <text x="200" y="238" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="7.5" fill="#4B4C4E">COLD-PRESSED</text>
+          <rect x="178" y="250" width="48" height="2.5" fill="#DFD8C8"/>
+          <rect x="178" y="260" width="34" height="4" fill="#DFD8C8"/>
+          <rect x="178" y="270" width="40" height="4" fill="#DFD8C8"/>
+          <circle cx="228" cy="176" r="18" fill="#E13B2E"/>
+          <text x="228" y="173" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="7" fill="#fff">100%</text>
+          <text x="228" y="182" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="6" fill="#fff">NATURAL</text>
+        </svg>
+      </div>
+
+      <div class="product-copy">
+        <span class="product-index">01 — Packaging &amp; Retail</span>
+        <h2>Product Labels</h2>
+        <p>Your label is the first thing a customer reads before they've read anything else. We print labels that hold their color, resist moisture and stay put through shipping, shelf time and daily handling — for jars, bottles, boxes and pouches alike.</p>
+
+        <dl class="product-specs">
+          <div class="product-spec-item"><dt>Best for</dt><dd>Bottles, jars, boxes &amp; retail packaging</dd></div>
+          <div class="product-spec-item"><dt>Available shapes</dt><dd>Rectangle, square, round, custom die-cut</dd></div>
+          <div class="product-spec-item"><dt>Material options</dt><dd>Paper, vinyl, kraft, clear film</dd></div>
+          <div class="product-spec-item"><dt>Finish options</dt><dd>Matte, gloss, satin</dd></div>
+          <div class="product-spec-item"><dt>Typical applications</dt><dd>Cosmetics, food &amp; beverage, candles, skincare</dd></div>
+        </dl>
+
+        <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 2 — Barcode Stickers — reversed: copy left, image right -->
+<section class="product-row product-row--reverse" id="barcode-stickers">
+  <div class="wrap">
+    <div class="product-row-inner reveal">
+
+      <div class="product-copy">
+        <span class="product-index">02 — Inventory &amp; Logistics</span>
+        <h2>Barcode Stickers</h2>
+        <p>Built for scanners, not just eyes. Our barcode stickers print crisp, high-contrast codes that read cleanly the first time, every time — on cartons, shelf edges, storage bins and shipped products.</p>
+
+        <dl class="product-specs">
+          <div class="product-spec-item"><dt>Best for</dt><dd>Inventory tracking &amp; retail logistics</dd></div>
+          <div class="product-spec-item"><dt>Available shapes</dt><dd>Rectangle, small square</dd></div>
+          <div class="product-spec-item"><dt>Material options</dt><dd>Thermal paper, matte vinyl, polypropylene</dd></div>
+          <div class="product-spec-item"><dt>Finish options</dt><dd>Matte, scanner-optimized</dd></div>
+          <div class="product-spec-item"><dt>Typical applications</dt><dd>Warehousing, retail POS, shipping, asset tags</dd></div>
+        </dl>
+
+        <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+      <div class="product-figure">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="500" fill="#F1E2D2"/>
+          <rect x="90" y="170" width="220" height="150" rx="10" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <text x="200" y="200" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#17181A">SKU 04521</text>
+          <g fill="#17181A">
+            <rect x="112" y="214" width="3" height="46"/><rect x="119" y="214" width="2" height="46"/><rect x="125" y="214" width="4" height="46"/>
+            <rect x="133" y="214" width="2" height="46"/><rect x="139" y="214" width="3" height="46"/><rect x="146" y="214" width="2" height="46"/>
+            <rect x="152" y="214" width="5" height="46"/><rect x="161" y="214" width="2" height="46"/><rect x="167" y="214" width="3" height="46"/>
+            <rect x="174" y="214" width="2" height="46"/><rect x="180" y="214" width="4" height="46"/><rect x="188" y="214" width="3" height="46"/>
+            <rect x="195" y="214" width="2" height="46"/><rect x="201" y="214" width="5" height="46"/><rect x="210" y="214" width="2" height="46"/>
+            <rect x="216" y="214" width="3" height="46"/><rect x="223" y="214" width="2" height="46"/><rect x="229" y="214" width="4" height="46"/>
+            <rect x="237" y="214" width="3" height="46"/><rect x="244" y="214" width="2" height="46"/><rect x="250" y="214" width="5" height="46"/>
+            <rect x="259" y="214" width="2" height="46"/><rect x="265" y="214" width="3" height="46"/><rect x="272" y="214" width="2" height="46"/>
+          </g>
+          <text x="200" y="288" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="11" letter-spacing="2" fill="#4B4C4E">8 901234 567890</text>
+          <path d="M90 170 L70 150 M310 170 L330 150" stroke="#B97A4A" stroke-width="2" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 3 — Wall Decals — wide environmental photograph, copy below -->
+<section class="product-row product-row--wide" id="wall-decals">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="product-figure">
+        <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
+          <rect width="1000" height="500" fill="#E4EEE9"/>
+          <rect x="0" y="380" width="1000" height="120" fill="#D8CDBB"/>
+          <rect x="60" y="60" width="340" height="230" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <rect x="640" y="120" width="300" height="200" fill="#FFFFFF" stroke="#17181A" stroke-width="2" opacity="0.55"/>
+          <path d="M420 130 C460 60 520 220 560 110 C600 20 650 190 720 100 C760 50 800 150 860 90"
+                stroke="#1B4A3E" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="450" cy="330" r="5" fill="#1B4A3E"/>
+          <circle cx="500" cy="300" r="5" fill="#1B4A3E"/>
+          <circle cx="560" cy="335" r="5" fill="#1B4A3E"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="product-copy reveal" style="max-width:640px; margin:0 auto;">
+      <span class="product-index">03 — Interior &amp; Signage</span>
+      <h2>Wall Decals</h2>
+      <p>Turn a blank wall, window or storefront into a statement. Our decals are cut for scale — from a single logo to a full-wall installation — using materials designed to apply cleanly and remove without residue when it's time for something new.</p>
+
+      <dl class="product-specs">
+        <div class="product-spec-item"><dt>Best for</dt><dd>Walls, windows, storefronts &amp; interiors</dd></div>
+        <div class="product-spec-item"><dt>Available shapes</dt><dd>Custom-cut logos, patterns, full-wall murals</dd></div>
+        <div class="product-spec-item"><dt>Material options</dt><dd>Removable vinyl, matte vinyl, static cling</dd></div>
+        <div class="product-spec-item"><dt>Finish options</dt><dd>Matte, textured</dd></div>
+        <div class="product-spec-item"><dt>Typical applications</dt><dd>Offices, retail storefronts, studios, event spaces</dd></div>
+      </dl>
+
+      <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 4 — Die-Cut Promotional Stickers — close-up image, floating spec card -->
+<section class="product-row product-row--closeup" id="die-cut-stickers">
+  <div class="wrap">
+    <div class="product-row-inner reveal">
+
+      <div class="product-figure">
+        <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice">
+          <rect width="500" height="500" fill="#17181A"/>
+          <path d="M250 40 C330 40 400 110 400 210 C400 320 320 400 250 460 C180 400 100 320 100 210 C100 110 170 40 250 40 Z" fill="#FFFFFF"/>
+          <path d="M250 66 C316 66 374 122 374 210 C374 302 306 372 250 428 C194 372 126 302 126 210 C126 122 184 66 250 66 Z" fill="#E13B2E"/>
+          <path d="M170 230 C190 180 215 270 245 200 C270 140 295 250 330 190" stroke="#FFFFFF" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <text x="250" y="330" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="30" fill="#FFFFFF">GOOD VIBES</text>
+        </svg>
+      </div>
+
+      <div class="product-copy">
+        <span class="product-index">04 — Branding &amp; Marketing</span>
+        <h2>Die-Cut Promotional Stickers</h2>
+        <p>Any shape you can imagine, cut exactly to your artwork's outline — no background, no compromise. The format brands reach for when a sticker needs to do the talking on its own.</p>
+
+        <dl class="product-specs">
+          <div class="product-spec-item"><dt>Best for</dt><dd>Brand marketing &amp; giveaways</dd></div>
+          <div class="product-spec-item"><dt>Available shapes</dt><dd>Any custom outline, kiss-cut or die-cut</dd></div>
+          <div class="product-spec-item"><dt>Material options</dt><dd>Vinyl, holographic, clear</dd></div>
+          <div class="product-spec-item"><dt>Finish options</dt><dd>Gloss, matte, glitter</dd></div>
+          <div class="product-spec-item"><dt>Typical applications</dt><dd>Merch drops, packaging inserts, laptop stickers</dd></div>
+        </dl>
+
+        <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 5 — Custom Promotional Stickers — editorial, asymmetric, tag pills -->
+<section class="product-row product-row--editorial" id="custom-promotional">
+  <div class="wrap">
+    <div class="product-row-inner reveal">
+
+      <div class="product-figure">
+        <svg viewBox="0 0 320 420" preserveAspectRatio="xMidYMid slice">
+          <rect width="320" height="420" fill="#EEEAE0"/>
+          <circle cx="120" cy="110" r="58" fill="#F1E2D2" stroke="#17181A" stroke-width="2" transform="rotate(-8 120 110)"/>
+          <text x="120" y="106" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#17181A" transform="rotate(-8 120 110)">SUPPORT</text>
+          <text x="120" y="122" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#B97A4A" transform="rotate(-8 120 110)">LOCAL</text>
+          <rect x="70" y="220" width="150" height="110" rx="14" fill="#FFFFFF" stroke="#17181A" stroke-width="2" transform="rotate(5 145 275)"/>
+          <circle cx="145" cy="275" r="34" fill="#E13B2E" transform="rotate(5 145 275)"/>
+          <path d="M132 275 C132 266 144 266 145 275 C146 266 158 266 158 275 C158 286 145 296 145 296 C145 296 132 286 132 275 Z" fill="#FFFFFF" transform="rotate(5 145 275)"/>
+          <path d="M40 340 C60 300 80 360 100 320" stroke="#23594A" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="product-copy">
+        <span class="product-index">05 — Events &amp; Personal Branding</span>
+        <h2>Custom Promotional Stickers</h2>
+        <p>For launches, pop-ups, weddings, giveaways and anyone building something of their own — a sticker that's part branding, part keepsake. Mix shapes and finishes across a single run, or keep it simple with one design at scale.</p>
+
+        <div class="product-tags">
+          <span class="tag">Custom shapes</span>
+          <span class="tag">Vinyl &amp; paper stock</span>
+          <span class="tag">Matte, gloss &amp; holographic</span>
+          <span class="tag">Small or bulk runs</span>
+        </div>
+
+        <p><strong>Best for:</strong> Events, pop-ups &amp; personal branding · <strong>Typical applications:</strong> Weddings, product launches, creator merch, giveaways</p>
+
+        <a href="index.html#quote" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPLICATION GUIDE ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="kicker">Not sure where to start?</span>
+      <h2>If you're printing for...</h2>
+    </div>
+
+    <div class="app-guide-list">
+      <a class="app-guide-row" href="#product-labels">
+        <div class="app-guide-scenario"><span class="app-num">01</span><h4>Product Packaging</h4></div>
+        <div class="app-guide-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+          <span class="app-guide-result">Product Labels</span>
+        </div>
+      </a>
+      <a class="app-guide-row" href="#barcode-stickers">
+        <div class="app-guide-scenario"><span class="app-num">02</span><h4>Inventory</h4></div>
+        <div class="app-guide-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+          <span class="app-guide-result">Barcode Stickers</span>
+        </div>
+      </a>
+      <a class="app-guide-row" href="#wall-decals">
+        <div class="app-guide-scenario"><span class="app-num">03</span><h4>Walls &amp; Windows</h4></div>
+        <div class="app-guide-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+          <span class="app-guide-result">Decals</span>
+        </div>
+      </a>
+      <a class="app-guide-row" href="#die-cut-stickers">
+        <div class="app-guide-scenario"><span class="app-num">04</span><h4>Marketing</h4></div>
+        <div class="app-guide-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+          <span class="app-guide-result">Die-Cut Stickers</span>
+        </div>
+      </a>
+      <a class="app-guide-row" href="#custom-promotional">
+        <div class="app-guide-scenario"><span class="app-num">05</span><h4>Events</h4></div>
+        <div class="app-guide-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+          <span class="app-guide-result">Promotional Stickers</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CUSTOMIZATION ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="kicker">Make it yours</span>
+      <h2>Customize every detail</h2>
+      <p class="lede" style="margin-top:12px;">Whichever product you choose, these are the pieces you get to control.</p>
+    </div>
+
+    <div class="customize-grid">
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 C17 3 21 8 21 12 C21 17 17 21 12 21 C7 21 3 17 3 12 C3 8 7 3 12 3 Z" stroke-dasharray="2.4 2.4"/></svg>
+        <h4>Shape</h4>
+        <p>Standard cuts or fully custom outlines.</p>
+      </div>
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 15 H9 V21"/></svg>
+        <h4>Size</h4>
+        <p>From tiny asset tags to full-wall installs.</p>
+      </div>
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 L10 6 L14 16 L17 10 L20 20"/></svg>
+        <h4>Material</h4>
+        <p>Paper, vinyl, kraft, clear &amp; specialty stock.</p>
+      </div>
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12 L11 15 L16 9"/></svg>
+        <h4>Finish</h4>
+        <p>Matte, gloss, satin, holographic &amp; more.</p>
+      </div>
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="14" height="9"/><path d="M16 11 H20 L22 14 V17 H16 Z"/><circle cx="6.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <h4>Quantity</h4>
+        <p>Single sheets through bulk production runs.</p>
+      </div>
+      <div class="customize-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 V15 M12 15 L8 11 M12 15 L16 11 M4 17 V19 A2 2 0 0 0 6 21 H18 A2 2 0 0 0 20 19 V17"/></svg>
+        <h4>Artwork</h4>
+        <p>Upload ready files or get design support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BULK ORDER CTA ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="bulk-cta">
+      <div class="bulk-copy">
+        <h2>Need Hundreds or Thousands?</h2>
+        <p>Every product on this page scales into bulk production. Quantity-based pricing kicks in as your order grows, with the same quality control on sticker 10 as on sticker 10,000.</p>
+        <a href="index.html#quote" class="btn btn-primary" style="margin-top:24px;">Request Bulk Pricing</a>
+      </div>
+      <div class="bulk-stat">
+        <div class="bulk-stat-num">100–50k+</div>
+        <div class="bulk-stat-label">Units per order</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="final-cta final-cta--dark">
+      <svg class="final-cta-motif" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#fff"/></svg>
+      <div>
+        <h2>Have a Different Idea?</h2>
+        <p>If your project doesn't fit neatly into a category, our print team can help you figure out the right shape, material and finish.</p>
+      </div>
+      <a href="index.html#quote" class="btn btn-primary">Talk to Our Print Team</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================ FOOTER =============================== -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#FFFFFF"/>
+            <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+          </svg>
+          <span>StickPro</span>
+        </a>
+        <p>High-quality custom stickers and labels for businesses, creators and everyone in between.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 20 L13 8 M11 14 C13.5 14 15 12.3 15 10 C15 8 13.3 7 11.5 7 C9 7 7.5 9 7.5 11"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3 C15 6 17 8 20 8 M15 3 V15 A4 4 0 1 1 11 11"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#product-labels">Product Labels</a></li>
+          <li><a href="#barcode-stickers">Barcode Stickers</a></li>
+          <li><a href="#die-cut-stickers">Die-Cut Stickers</a></li>
+          <li><a href="#wall-decals">Wall Decals</a></li>
+          <li><a href="#custom-promotional">Custom Shape Labels</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="index.html#materials">Materials &amp; Finishes</a></li>
+          <li><a href="#">Artwork Guide</a></li>
+          <li><a href="index.html#quote">Bulk Pricing</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Keep in touch</h4>
+        <p style="color:rgba(255,255,255,.6); font-size:14.5px; margin:0;">Get print tips and new product drops in your inbox.</p>
+        <form onsubmit="return false;">
+          <label for="footerEmail" class="visually-hidden" style="position:absolute; left:-9999px;">Email address</label>
+          <input id="footerEmail" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 StickPro. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StickPro — Turn Your Idea Into Something Physical</title>
+<meta name="description" content="StickPro turns your design idea into a premium physical print experience. Custom stickers, labels and packaging seals — shaped, finished and delivered to your spec.">
+<link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+        <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+      </svg>
+      <span>StickPro<span class="logo-sub">Custom Stickers &amp; Labels</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="home2.html" class="current">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="materials.html">Materials &amp; Finishes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-util-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="header-util-btn dir-toggle" id="dirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+      </button>
+
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="home2.html" class="current">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="materials.html">Materials &amp; Finishes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-nav-utils">
+      <button class="header-util-btn theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="util-label">Theme</span>
+      </button>
+      <button class="header-util-btn dir-toggle" id="dirToggleMobile" aria-label="Switch layout direction" title="Toggle direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+        <span class="util-label">Direction</span>
+      </button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===========================================================
+     SECTION 1 — DESIGN TABLE HERO
+     A top-down premium designer's work desk.
+     Canvas left / typography right on desktop.
+     Stacks on tablet / mobile.
+     =========================================================== -->
+<section class="h2-hero" aria-label="Design Table Hero">
+  <div class="h2-hero-inner">
+
+    <!-- LEFT: The Desk Canvas -->
+    <div class="h2-desk-canvas" role="img" aria-label="Designer's work desk with sticker samples, product label, die-cut sheet, colour swatches, pencil and finished branded packaging">
+      <svg viewBox="0 0 820 680" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- Desk surface — warm kraft -->
+        <rect width="820" height="680" fill="#E8E2D4"/>
+
+        <!-- Cutting mat grid subtle -->
+        <g stroke="rgba(180,160,120,0.14)" stroke-width="1">
+          <line x1="0" y1="40" x2="820" y2="40"/><line x1="0" y1="80" x2="820" y2="80"/>
+          <line x1="0" y1="120" x2="820" y2="120"/><line x1="0" y1="160" x2="820" y2="160"/>
+          <line x1="0" y1="200" x2="820" y2="200"/><line x1="0" y1="240" x2="820" y2="240"/>
+          <line x1="0" y1="280" x2="820" y2="280"/><line x1="0" y1="320" x2="820" y2="320"/>
+          <line x1="0" y1="360" x2="820" y2="360"/><line x1="0" y1="400" x2="820" y2="400"/>
+          <line x1="0" y1="440" x2="820" y2="440"/><line x1="0" y1="480" x2="820" y2="480"/>
+          <line x1="0" y1="520" x2="820" y2="520"/><line x1="0" y1="560" x2="820" y2="560"/>
+          <line x1="0" y1="600" x2="820" y2="600"/><line x1="0" y1="640" x2="820" y2="640"/>
+          <line x1="40" y1="0" x2="40" y2="680"/><line x1="80" y1="0" x2="80" y2="680"/>
+          <line x1="120" y1="0" x2="120" y2="680"/><line x1="160" y1="0" x2="160" y2="680"/>
+          <line x1="200" y1="0" x2="200" y2="680"/><line x1="240" y1="0" x2="240" y2="680"/>
+          <line x1="280" y1="0" x2="280" y2="680"/><line x1="320" y1="0" x2="320" y2="680"/>
+          <line x1="360" y1="0" x2="360" y2="680"/><line x1="400" y1="0" x2="400" y2="680"/>
+          <line x1="440" y1="0" x2="440" y2="680"/><line x1="480" y1="0" x2="480" y2="680"/>
+          <line x1="520" y1="0" x2="520" y2="680"/><line x1="560" y1="0" x2="560" y2="680"/>
+          <line x1="600" y1="0" x2="600" y2="680"/><line x1="640" y1="0" x2="640" y2="680"/>
+          <line x1="680" y1="0" x2="680" y2="680"/><line x1="720" y1="0" x2="720" y2="680"/>
+          <line x1="760" y1="0" x2="760" y2="680"/><line x1="800" y1="0" x2="800" y2="680"/>
+        </g>
+
+        <!-- PAPER SHEET (bottom-left) — artwork print, slight rotation -->
+        <g transform="translate(80,490) rotate(-3)">
+          <rect x="-90" y="-110" width="180" height="220" rx="4" fill="white" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+          <rect x="-70" y="-90" width="140" height="90" rx="3" fill="#EEEAE0"/>
+          <text x="0" y="-44" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">STUDIO</text>
+          <text x="0" y="-26" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="9" letter-spacing="3" fill="#4B4C4E">CONCEPT DRAFT</text>
+          <rect x="-70" y="14" width="140" height="5" rx="2.5" fill="#DFD8C8"/>
+          <rect x="-70" y="26" width="100" height="5" rx="2.5" fill="#DFD8C8"/>
+          <rect x="-70" y="38" width="120" height="5" rx="2.5" fill="#DFD8C8"/>
+          <rect x="-70" y="50" width="80" height="5" rx="2.5" fill="#DFD8C8"/>
+          <rect x="-70" y="62" width="110" height="5" rx="2.5" fill="#DFD8C8"/>
+          <rect x="-70" y="74" width="90" height="5" rx="2.5" fill="#DFD8C8"/>
+          <!-- die-cut outline drawn on sheet -->
+          <circle cx="0" cy="-50" r="28" fill="none" stroke="#E13B2E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="0" y="-47" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="8" fill="#E13B2E">LOGO</text>
+          <text x="0" y="-38" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="8" fill="#E13B2E">HERE</text>
+        </g>
+
+        <!-- COLOUR SWATCHES (bottom-left area) -->
+        <g transform="translate(230,570) rotate(2)">
+          <rect x="-70" y="-28" width="140" height="56" rx="8" fill="white" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+          <circle cx="-42" cy="0" r="16" fill="#E13B2E"/>
+          <circle cx="-12" cy="0" r="16" fill="#17181A"/>
+          <circle cx="18" cy="0" r="16" fill="#23594A"/>
+          <circle cx="48" cy="0" r="16" fill="#B97A4A"/>
+        </g>
+
+        <!-- DIE-CUT STICKER SHEET (top-left area) -->
+        <g transform="translate(180,200) rotate(-2)">
+          <rect x="-100" y="-130" width="200" height="260" rx="8" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+          <!-- rows of die-cuts on sheet -->
+          <g stroke="#DFD8C8" stroke-width="1" stroke-dasharray="3 2">
+            <!-- row 1 -->
+            <rect x="-82" y="-110" width="60" height="70" rx="6" fill="none"/>
+            <rect x="-10" y="-110" width="80" height="70" rx="35" fill="none"/>
+            <!-- row 2 -->
+            <circle cx="-52" cy="10" r="35" fill="none"/>
+            <rect x="-5" y="-26" width="80" height="72" rx="8" fill="none"/>
+            <!-- row 3 -->
+            <rect x="-82" y="52" width="60" height="52" rx="26" fill="none"/>
+            <rect x="-5" y="52" width="80" height="52" rx="6" fill="none"/>
+          </g>
+          <!-- one applied sticker -->
+          <circle cx="-52" cy="10" r="28" fill="#E13B2E"/>
+          <text x="-52" y="7" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="9" fill="white">YOUR</text>
+          <text x="-52" y="18" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="9" fill="white">LOGO</text>
+        </g>
+
+        <!-- PENCIL (angled, right of sheet) -->
+        <g transform="translate(330,400) rotate(28)">
+          <rect x="-6" y="-100" width="12" height="200" rx="3" fill="#F0D060"/>
+          <polygon points="0,-115 -6,-100 6,-100" fill="#D4A030"/>
+          <rect x="-6" y="90" width="12" height="16" rx="2" fill="#C0A0A0"/>
+          <rect x="-6" y="100" width="12" height="4" fill="#D4A030"/>
+        </g>
+
+        <!-- STICKER ROLL (right side, large) -->
+        <g transform="translate(560,200) rotate(3)">
+          <!-- roll tube -->
+          <ellipse cx="0" cy="-10" rx="55" ry="14" fill="#DFD8C8"/>
+          <rect x="-55" y="-10" width="110" height="200" fill="#F1E2D2"/>
+          <rect x="-55" y="190" width="110" height="4" fill="#DFD8C8"/>
+          <ellipse cx="0" cy="192" rx="55" ry="14" fill="#E8DFCC"/>
+          <!-- backing marks -->
+          <g stroke="rgba(0,0,0,0.07)" stroke-width="0.8">
+            <line x1="-55" y1="20" x2="55" y2="20"/>
+            <line x1="-55" y1="70" x2="55" y2="70"/>
+            <line x1="-55" y1="120" x2="55" y2="120"/>
+            <line x1="-55" y1="170" x2="55" y2="170"/>
+          </g>
+          <!-- labels on roll -->
+          <rect x="-42" y="0" width="84" height="50" rx="6" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+          <rect x="-32" y="10" width="64" height="20" rx="3" fill="#23594A"/>
+          <text x="0" y="24" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="9" fill="white">HARVEST</text>
+          <rect x="-32" y="35" width="40" height="4" rx="2" fill="#DFD8C8"/>
+          <rect x="-42" y="55" width="84" height="50" rx="6" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+          <rect x="-32" y="65" width="64" height="20" rx="3" fill="#B97A4A"/>
+          <text x="0" y="79" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="9" fill="white">BLOOM</text>
+          <rect x="-32" y="90" width="40" height="4" rx="2" fill="#DFD8C8"/>
+          <!-- peel hint -->
+          <path d="M55 190 Q62 185 60 196 Q52 200 50 193 Z" fill="#E8DFCC" stroke="rgba(0,0,0,0.08)" stroke-width="0.8"/>
+        </g>
+
+        <!-- MAIN FOCAL OBJECT: Branded Product Package (centre-right) -->
+        <g transform="translate(440,380) rotate(-2)">
+          <!-- box base -->
+          <rect x="-100" y="-130" width="200" height="260" rx="10" fill="white" stroke="rgba(0,0,0,0.1)" stroke-width="1.5"/>
+          <!-- box lid -->
+          <rect x="-100" y="-130" width="200" height="52" rx="10" fill="#17181A"/>
+          <!-- subtle shadow -->
+          <rect x="-96" y="-76" width="192" height="3" fill="rgba(0,0,0,0.06)"/>
+          <!-- brand label applied to box -->
+          <rect x="-72" y="-60" width="144" height="190" rx="8" fill="#F6F3EC" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+          <rect x="-60" y="-42" width="120" height="64" rx="5" fill="#E13B2E"/>
+          <text x="0" y="-14" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="22" fill="white">STUDIO</text>
+          <text x="0" y="4" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="8" letter-spacing="3" fill="rgba(255,255,255,0.75)">PRINT CO.</text>
+          <rect x="-60" y="32" width="120" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-60" y="46" width="80" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-60" y="60" width="100" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-60" y="74" width="60" height="6" rx="3" fill="#DFD8C8"/>
+          <!-- small circular seal -->
+          <circle cx="52" cy="100" r="28" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+          <circle cx="52" cy="100" r="22" fill="#23594A"/>
+          <text x="52" y="97" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="7" fill="white">VERIFIED</text>
+          <text x="52" y="107" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="7" fill="white">PRINT</text>
+          <!-- box lid text -->
+          <text x="0" y="-110" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="12" fill="white">STICKPRO</text>
+        </g>
+
+        <!-- MATERIAL SAMPLE SWATCHES (top-right) -->
+        <g transform="translate(680,110) rotate(-3)">
+          <rect x="-80" y="-60" width="160" height="120" rx="8" fill="white" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+          <!-- swatch tabs -->
+          <rect x="-64" y="-44" width="120" height="28" rx="4" fill="#EDEAE1"/>
+          <text x="-4" y="-26" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">MATTE FINISH</text>
+          <rect x="-64" y="-8" width="120" height="28" rx="4" fill="#D8E8FF" opacity="0.5"/>
+          <text x="-4" y="10" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">GLOSS FINISH</text>
+          <rect x="-64" y="28" width="120" height="24" rx="4" fill="rgba(255,255,255,0.1)" stroke="rgba(0,0,0,0.15)" stroke-width="1" stroke-dasharray="3 2"/>
+          <text x="-4" y="44" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">CLEAR FILM</text>
+        </g>
+
+        <!-- TRANSPARENT LABEL (floating, near middle-right) -->
+        <g transform="translate(680,350) rotate(4)">
+          <rect x="-52" y="-70" width="104" height="140" rx="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text x="0" y="-20" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="13" fill="rgba(23,24,26,0.7)">FLORA</text>
+          <text x="0" y="-4" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="8" letter-spacing="2" fill="rgba(23,24,26,0.5)">BOTANICALS</text>
+          <rect x="-32" y="14" width="64" height="1" fill="rgba(23,24,26,0.15)"/>
+          <text x="0" y="30" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="500" font-size="8" fill="rgba(23,24,26,0.4)">100ml</text>
+        </g>
+
+        <!-- RULER (horizontal at bottom) -->
+        <g transform="translate(0,650)">
+          <rect x="40" y="0" width="740" height="18" rx="3" fill="rgba(180,160,120,0.2)"/>
+          <g fill="rgba(120,100,70,0.4)" font-family="Archivo,sans-serif" font-size="7" font-weight="600">
+            <line x1="80" y1="0" x2="80" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="120" y1="0" x2="120" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="240" y1="0" x2="240" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="280" y1="0" x2="280" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="320" y1="0" x2="320" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="360" y1="0" x2="360" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="440" y1="0" x2="440" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="480" y1="0" x2="480" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="520" y1="0" x2="520" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="560" y1="0" x2="560" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="600" y1="0" x2="600" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="640" y1="0" x2="640" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="680" y1="0" x2="680" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+            <line x1="720" y1="0" x2="720" y2="18" stroke="rgba(120,100,70,0.3)" stroke-width="1"/>
+            <line x1="760" y1="0" x2="760" y2="12" stroke="rgba(120,100,70,0.2)" stroke-width="1"/>
+          </g>
+        </g>
+      </svg>
+
+      <!-- Annotation overlays (CSS positioned) -->
+      <div class="h2-annotation" style="top:16%;left:4%;">
+        <span class="h2-annotation-line"></span>
+        <span class="h2-annotation-label">DIE-CUT</span>
+      </div>
+      <div class="h2-annotation" style="top:55%;left:3%;">
+        <span class="h2-annotation-line"></span>
+        <span class="h2-annotation-label">CUSTOM SHAPE</span>
+      </div>
+      <div class="h2-annotation" style="top:12%;right:5%;flex-direction:row-reverse;">
+        <span class="h2-annotation-line"></span>
+        <span class="h2-annotation-label">MATTE FINISH</span>
+      </div>
+      <div class="h2-annotation" style="top:44%;right:4%;flex-direction:row-reverse;">
+        <span class="h2-annotation-line"></span>
+        <span class="h2-annotation-label">CLEAR LABEL</span>
+      </div>
+      <div class="h2-annotation" style="bottom:14%;left:48%;transform:translateX(-50%);">
+        <span class="h2-annotation-label">PRINT READY</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Typography panel -->
+    <div class="h2-hero-copy">
+      <span class="h2-kicker">StickPro Material Studio</span>
+      <h1>Turn Your Idea Into Something People Can <span class="h2-accent">Touch.</span></h1>
+      <p class="lede">Custom stickers and labels designed around your product, your packaging, your space, and your story.</p>
+      <span class="h2-hero-pill">Custom shapes &bull; Materials &bull; Finishes &bull; Small &amp; bulk orders</span>
+      <div class="h2-cta-row">
+        <a href="contact.html#quote" class="btn btn-primary">Start Your Design</a>
+        <a href="gallery.html" class="btn btn-ghost">See Our Work</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 2 — EVERY GREAT STICKER STARTS WITH A BLANK
+     Horizontal visual sequence: Blank → Shape → Art → Colour → Finish → Final
+     =========================================================== -->
+<section class="h2-section" id="blank-start">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">The Creative Journey</span>
+      <h2>Every Great Sticker Starts With a Blank.</h2>
+      <p style="max-width:48ch;">Six steps from nothing to something you can stick, ship, and sell. Each one deliberate. Each one yours.</p>
+    </div>
+
+    <div class="h2-blank-seq-track" id="blankSeqTrack">
+
+      <!-- Step 1: Blank -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#F6F3EC;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <rect x="20" y="18" width="80" height="80" rx="6" fill="#F6F3EC"/>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#EEEAE0"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap">
+          <div class="h2-seq-num">Step 01</div>
+          <div class="h2-seq-label">Blank</div>
+        </div>
+      </div>
+
+      <!-- Step 2: Shape -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#F6F3EC;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle cx="60" cy="55" r="38" fill="none" stroke="#E13B2E" stroke-width="2" stroke-dasharray="6 4"/>
+            <text x="60" y="59" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="10" fill="#E13B2E">ROUND</text>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#EEEAE0"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap">
+          <div class="h2-seq-num">Step 02</div>
+          <div class="h2-seq-label">Shape</div>
+        </div>
+      </div>
+
+      <!-- Step 3: Artwork -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#F6F3EC;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle cx="60" cy="55" r="38" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+            <circle cx="60" cy="55" r="30" fill="#EEEAE0"/>
+            <text x="60" y="50" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="#17181A">YOUR</text>
+            <text x="60" y="64" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="#17181A">BRAND</text>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#EEEAE0"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap">
+          <div class="h2-seq-num">Step 03</div>
+          <div class="h2-seq-label">Artwork</div>
+        </div>
+      </div>
+
+      <!-- Step 4: Colour -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#F6F3EC;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle cx="60" cy="55" r="38" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+            <circle cx="60" cy="55" r="30" fill="#E13B2E"/>
+            <text x="60" y="50" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="white">YOUR</text>
+            <text x="60" y="64" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="white">BRAND</text>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#EEEAE0"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap">
+          <div class="h2-seq-num">Step 04</div>
+          <div class="h2-seq-label">Colour</div>
+        </div>
+      </div>
+
+      <!-- Step 5: Finish -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#F6F3EC;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gloss5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.55)"/><stop offset="60%" stop-color="rgba(255,255,255,0)"/></linearGradient></defs>
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle cx="60" cy="55" r="38" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+            <circle cx="60" cy="55" r="30" fill="#E13B2E"/>
+            <circle cx="60" cy="55" r="30" fill="url(#gloss5)"/>
+            <text x="60" y="50" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="white">YOUR</text>
+            <text x="60" y="64" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="12" fill="white">BRAND</text>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#EEEAE0"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap">
+          <div class="h2-seq-num">Step 05</div>
+          <div class="h2-seq-label">Finish</div>
+        </div>
+      </div>
+
+      <!-- Step 6: Final Sticker (peeled) -->
+      <div class="h2-seq-step">
+        <div class="h2-seq-img" style="background:#EEEAE0;">
+          <svg viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
+            <!-- backing peel -->
+            <rect x="10" y="6" width="100" height="120" rx="8" fill="white" stroke="#DFD8C8" stroke-width="1" opacity="0.6"/>
+            <!-- peeled sticker lifted -->
+            <g transform="translate(60,50) rotate(-8)">
+              <circle r="36" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+              <circle r="29" fill="#E13B2E"/>
+              <text x="0" y="-4" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="11" fill="white">YOUR</text>
+              <text x="0" y="10" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="11" fill="white">BRAND</text>
+              <!-- peel shadow -->
+              <ellipse cx="4" cy="40" rx="26" ry="5" fill="rgba(0,0,0,0.08)"/>
+            </g>
+            <rect x="20" y="112" width="80" height="6" rx="3" fill="#DFD8C8"/>
+          </svg>
+        </div>
+        <div class="h2-seq-cap" style="background:var(--ink); border-color:var(--ink);">
+          <div class="h2-seq-num" style="color:rgba(255,255,255,0.4);">Step 06</div>
+          <div class="h2-seq-label" style="color:white;">Final Sticker</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 3 — CUSTOMISATION STUDIO "Make It Yours."
+     Interactive shape / material / finish selector.
+     Central SVG preview updates on selection.
+     =========================================================== -->
+<section class="h2-section-alt" id="studio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">Customisation Studio</span>
+      <h2>Make It Yours.</h2>
+      <p style="max-width:48ch;">Every sticker we print is built to your specification. Shape, material, and finish — you decide all three.</p>
+    </div>
+
+    <div class="h2-studio-layout">
+
+      <!-- Controls -->
+      <div class="h2-studio-controls">
+
+        <div class="h2-ctrl-group">
+          <div class="h2-ctrl-label">Shape</div>
+          <div class="h2-ctrl-opts" role="group" aria-label="Shape selection">
+            <button class="h2-ctrl-btn h2-selected" data-ctrl="shape" data-val="round" id="shape-round" aria-pressed="true">Round</button>
+            <button class="h2-ctrl-btn" data-ctrl="shape" data-val="square" id="shape-square" aria-pressed="false">Square</button>
+            <button class="h2-ctrl-btn" data-ctrl="shape" data-val="diecut" id="shape-diecut" aria-pressed="false">Die-Cut</button>
+          </div>
+        </div>
+
+        <div class="h2-ctrl-group">
+          <div class="h2-ctrl-label">Material</div>
+          <div class="h2-ctrl-opts" role="group" aria-label="Material selection">
+            <button class="h2-ctrl-btn h2-selected" data-ctrl="material" data-val="vinyl" id="mat-vinyl" aria-pressed="true">Vinyl</button>
+            <button class="h2-ctrl-btn" data-ctrl="material" data-val="paper" id="mat-paper" aria-pressed="false">Paper</button>
+            <button class="h2-ctrl-btn" data-ctrl="material" data-val="clear" id="mat-clear" aria-pressed="false">Clear</button>
+          </div>
+        </div>
+
+        <div class="h2-ctrl-group">
+          <div class="h2-ctrl-label">Finish</div>
+          <div class="h2-ctrl-opts" role="group" aria-label="Finish selection">
+            <button class="h2-ctrl-btn h2-selected" data-ctrl="finish" data-val="matte" id="fin-matte" aria-pressed="true">Matte</button>
+            <button class="h2-ctrl-btn" data-ctrl="finish" data-val="gloss" id="fin-gloss" aria-pressed="false">Gloss</button>
+          </div>
+        </div>
+
+        <div class="h2-ctrl-group">
+          <div class="h2-ctrl-label">Size</div>
+          <div class="h2-ctrl-opts" role="group" aria-label="Size selection">
+            <button class="h2-ctrl-btn" data-ctrl="size" data-val="small" id="size-small" aria-pressed="false">2 &times; 2 in</button>
+            <button class="h2-ctrl-btn h2-selected" data-ctrl="size" data-val="medium" id="size-medium" aria-pressed="true">3 &times; 3 in</button>
+            <button class="h2-ctrl-btn" data-ctrl="size" data-val="large" id="size-large" aria-pressed="false">4 &times; 4 in</button>
+          </div>
+        </div>
+
+        <div class="h2-ctrl-group">
+          <div class="h2-ctrl-label">Quantity</div>
+          <div class="h2-ctrl-opts" role="group" aria-label="Quantity selection">
+            <button class="h2-ctrl-btn" data-ctrl="qty" data-val="50" id="qty-50" aria-pressed="false">50</button>
+            <button class="h2-ctrl-btn" data-ctrl="qty" data-val="250" id="qty-250" aria-pressed="false">250</button>
+            <button class="h2-ctrl-btn h2-selected" data-ctrl="qty" data-val="500" id="qty-500" aria-pressed="true">500</button>
+            <button class="h2-ctrl-btn" data-ctrl="qty" data-val="1000" id="qty-1000" aria-pressed="false">1,000+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Central Preview -->
+      <div class="h2-studio-preview">
+        <div class="h2-preview-stage" id="studioPreviewStage">
+          <svg id="studioPreviewSvg" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+            <!-- Default: Round Vinyl Matte -->
+            <circle cx="140" cy="140" r="118" fill="white" stroke="#DFD8C8" stroke-width="2"/>
+            <circle cx="140" cy="140" r="104" fill="#E13B2E"/>
+            <text x="140" y="136" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="white">YOUR</text>
+            <text x="140" y="164" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="white">BRAND</text>
+          </svg>
+        </div>
+        <div class="h2-preview-label">Visual prototype — not a functional ordering tool</div>
+      </div>
+
+      <!-- Spec Summary -->
+      <div class="h2-studio-spec">
+        <div class="h2-spec-title">Your Spec</div>
+        <div class="h2-spec-rows">
+          <div class="h2-spec-row">
+            <span class="h2-spec-key">Shape</span>
+            <span class="h2-spec-val" id="specShape">Round</span>
+          </div>
+          <div class="h2-spec-row">
+            <span class="h2-spec-key">Material</span>
+            <span class="h2-spec-val" id="specMaterial">Vinyl</span>
+          </div>
+          <div class="h2-spec-row">
+            <span class="h2-spec-key">Finish</span>
+            <span class="h2-spec-val" id="specFinish">Matte</span>
+          </div>
+          <div class="h2-spec-row">
+            <span class="h2-spec-key">Size</span>
+            <span class="h2-spec-val" id="specSize">3 &times; 3 in</span>
+          </div>
+          <div class="h2-spec-row">
+            <span class="h2-spec-key">Quantity</span>
+            <span class="h2-spec-val" id="specQty">500</span>
+          </div>
+        </div>
+        <div class="h2-studio-cta">
+          <a href="contact.html#quote" class="btn btn-primary">Get a Quote for This</a>
+          <p class="h2-studio-disclaimer">We'll confirm price &amp; lead time within 1 business day.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 4 — ONE IDEA, MANY PLACES
+     Radial story: central sticker → 5 real-world applications
+     =========================================================== -->
+<section class="h2-section" id="journey">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">One Brand, Every Touchpoint</span>
+      <h2>One Idea, Many Places.</h2>
+      <p style="max-width:48ch;">One sticker design. Five places it lands. Your brand identity travels without losing its identity.</p>
+    </div>
+
+    <div class="h2-journey-layout reveal">
+
+      <!-- LEFT: 2 tiles -->
+      <div class="h2-journey-left">
+        <div class="h2-journey-tile">
+          <div class="h2-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="h2-tile-text">
+            <h4>Product Packaging</h4>
+            <p>Your label anchors the unboxing moment.</p>
+          </div>
+        </div>
+        <div class="h2-journey-tile">
+          <div class="h2-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="h2-tile-text">
+            <h4>Storefront &amp; Window</h4>
+            <p>Make your space instantly recognisable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER: The sticker -->
+      <div class="h2-journey-center">
+        <div class="h2-journey-sticker" role="img" aria-label="Central branded sticker">
+          <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="65" cy="65" r="62" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle cx="65" cy="65" r="50" fill="#E13B2E"/>
+            <text x="65" y="60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="16" fill="white">YOUR</text>
+            <text x="65" y="76" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="16" fill="white">BRAND</text>
+            <text x="65" y="96" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="8" letter-spacing="2" fill="rgba(255,255,255,0.6)">STICKPRO</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- RIGHT: 3 tiles (reversed) -->
+      <div class="h2-journey-right">
+        <div class="h2-journey-tile">
+          <div class="h2-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.96-1.61L23 6H6"/></svg>
+          </div>
+          <div class="h2-tile-text">
+            <h4>Retail &amp; Shelving</h4>
+            <p>Stand out on a crowded shelf.</p>
+          </div>
+        </div>
+        <div class="h2-journey-tile">
+          <div class="h2-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="h2-tile-text">
+            <h4>Events &amp; Campaigns</h4>
+            <p>Handout stickers that keep working.</p>
+          </div>
+        </div>
+        <div class="h2-journey-tile">
+          <div class="h2-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="h2-tile-text">
+            <h4>Customer Items</h4>
+            <p>A sticker on their laptop is free advertising.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 5 — THE DIFFERENCE IS IN THE DETAILS
+     Macro editorial 3-zone asymmetric grid
+     =========================================================== -->
+<section class="h2-section-alt" id="details">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">Print Precision</span>
+      <h2>The Difference Is in the Details.</h2>
+      <p style="max-width:48ch;">The gap between a good sticker and a great one is measured in millimetres and surface feel.</p>
+    </div>
+
+    <div class="h2-details-grid reveal">
+
+      <!-- Wide: Cut edge -->
+      <div class="h2-detail-item">
+        <svg viewBox="0 0 700 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <rect width="700" height="360" fill="#17181A"/>
+          <!-- Die-cut edge close-up illustration -->
+          <rect x="0" y="0" width="350" height="360" fill="#1e2020"/>
+          <!-- Sticker white backing -->
+          <rect x="60" y="40" width="260" height="280" rx="0" fill="#F6F3EC"/>
+          <!-- Sticker face -->
+          <rect x="60" y="40" width="260" height="240" rx="0" fill="white"/>
+          <!-- Gloss highlight on sticker -->
+          <rect x="60" y="40" width="260" height="80" fill="url(#dcut_grad)" opacity="0.4"/>
+          <defs>
+            <linearGradient id="dcut_grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.8)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+          </defs>
+          <!-- Die cut line -->
+          <rect x="60" y="280" width="260" height="3" fill="#E13B2E" opacity="0.7"/>
+          <!-- Measurements -->
+          <line x1="340" y1="40" x2="340" y2="280" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="335" y1="40" x2="345" y2="40" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="335" y1="280" x2="345" y2="280" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <!-- Right side: text -->
+          <text x="510" y="140" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="32" fill="white">CLEAN</text>
+          <text x="510" y="172" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="32" fill="white">CUT</text>
+          <text x="510" y="200" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="13" fill="rgba(255,255,255,0.4)">±0.5mm tolerance</text>
+        </svg>
+        <div class="h2-detail-caption">
+          <span class="h2-detail-code">CUT</span>
+          <span class="h2-detail-name">01 — Laser Die-Cut Edge</span>
+        </div>
+      </div>
+
+      <!-- Tall: Surface texture -->
+      <div class="h2-detail-item">
+        <svg viewBox="0 0 340 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <rect width="340" height="360" fill="#EDEAE1"/>
+          <!-- matte surface grain pattern -->
+          <defs>
+            <pattern id="matte_grain" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+              <rect width="6" height="6" fill="#EDEAE1"/>
+              <circle cx="3" cy="3" r="0.6" fill="rgba(0,0,0,0.04)"/>
+            </pattern>
+          </defs>
+          <rect width="340" height="360" fill="url(#matte_grain)"/>
+          <!-- Label on surface -->
+          <rect x="40" y="60" width="260" height="240" rx="10" fill="white" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+          <rect x="56" y="80" width="228" height="100" rx="6" fill="#F1E2D2"/>
+          <text x="170" y="130" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="24" fill="#17181A">HARVEST</text>
+          <text x="170" y="152" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="10" letter-spacing="3" fill="#4B4C4E">ORGANIC</text>
+          <rect x="56" y="196" width="140" height="7" rx="3.5" fill="#DFD8C8"/>
+          <rect x="56" y="212" width="200" height="7" rx="3.5" fill="#DFD8C8"/>
+          <rect x="56" y="228" width="100" height="7" rx="3.5" fill="#DFD8C8"/>
+          <!-- "matte" callout arrow -->
+          <line x1="280" y1="160" x2="310" y2="120" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+          <circle cx="280" cy="160" r="3" fill="rgba(0,0,0,0.2)"/>
+        </svg>
+        <div class="h2-detail-caption">
+          <span class="h2-detail-code">SURFACE</span>
+          <span class="h2-detail-name">02 — Matte Laminate</span>
+        </div>
+      </div>
+
+      <!-- Square: Print detail -->
+      <div class="h2-detail-item">
+        <svg viewBox="0 0 340 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <rect width="340" height="360" fill="#23594A"/>
+          <!-- Macro type detail on white stock -->
+          <rect x="30" y="60" width="280" height="240" rx="8" fill="white"/>
+          <!-- crisp letterforms, macro view -->
+          <text x="170" y="160" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="60" fill="#17181A">Aa</text>
+          <text x="170" y="200" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="14" letter-spacing="4" fill="#4B4C4E">TYPEFACE</text>
+          <rect x="60" y="220" width="220" height="1.5" fill="rgba(0,0,0,0.08)"/>
+          <text x="170" y="248" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="11" fill="#4B4C4E">1200 DPI precision output</text>
+          <text x="170" y="266" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="11" fill="rgba(75,76,78,0.5)">Spot colour · CMYK</text>
+        </svg>
+        <div class="h2-detail-caption">
+          <span class="h2-detail-code">PRINT</span>
+          <span class="h2-detail-name">03 — 1200 DPI Output</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 6 — THE PACKAGING MOMENT (Full-Width Dark)
+     Dramatic dark section: large visual + dedicated copy panel
+     =========================================================== -->
+<section class="h2-packaging" id="packaging">
+  <div class="h2-packaging-inner">
+
+    <!-- Visual -->
+    <div class="h2-packaging-visual" role="img" aria-label="A beautifully branded package using StickPro labels — kraft box with a printed label, tissue paper, and a seal sticker">
+      <svg viewBox="0 0 780 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+        <rect width="780" height="520" fill="#1a1c1e"/>
+        <!-- Surface / table -->
+        <rect x="0" y="340" width="780" height="180" fill="#111214"/>
+        <!-- Subtle ambient light -->
+        <ellipse cx="390" cy="340" rx="300" ry="30" fill="rgba(255,255,255,0.03)"/>
+
+        <!-- Box (main) -->
+        <g transform="translate(280,240)">
+          <!-- box shadow -->
+          <ellipse cx="0" cy="105" rx="120" ry="12" fill="rgba(0,0,0,0.4)"/>
+          <!-- box body -->
+          <rect x="-115" y="-140" width="230" height="240" rx="6" fill="#2d2417"/>
+          <!-- box lid -->
+          <rect x="-120" y="-160" width="240" height="30" rx="4" fill="#3a2e1c"/>
+          <!-- top edge highlight -->
+          <rect x="-120" y="-162" width="240" height="3" fill="rgba(255,255,255,0.06)"/>
+          <!-- kraft label on box front -->
+          <rect x="-88" y="-110" width="176" height="200" rx="6" fill="#F1E2D2"/>
+          <!-- brand block on label -->
+          <rect x="-76" y="-92" width="152" height="72" rx="4" fill="#17181A"/>
+          <text x="0" y="-60" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="20" fill="white">STUDIO</text>
+          <text x="0" y="-40" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="8" letter-spacing="3" fill="rgba(255,255,255,0.6)">PRINT CO.</text>
+          <!-- body text lines on label -->
+          <rect x="-76" y="-8" width="110" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-76" y="8" width="140" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-76" y="24" width="90" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="-76" y="40" width="120" height="6" rx="3" fill="#DFD8C8"/>
+          <!-- seal sticker on front fold -->
+          <circle cx="60" cy="70" r="28" fill="white" stroke="#DFD8C8" stroke-width="1"/>
+          <circle cx="60" cy="70" r="22" fill="#E13B2E"/>
+          <text x="60" y="67" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="7" fill="white">SEALED</text>
+          <text x="60" y="77" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="7" fill="white">WITH CARE</text>
+        </g>
+
+        <!-- Tissue paper (left) -->
+        <g transform="translate(120,280) rotate(-12)">
+          <rect x="-80" y="-60" width="160" height="120" rx="4" fill="rgba(241,226,210,0.15)"/>
+          <path d="M-80,-60 Q0,-20 80,-60" fill="none" stroke="rgba(241,226,210,0.2)" stroke-width="1"/>
+          <path d="M-80,0 Q0,40 80,0" fill="none" stroke="rgba(241,226,210,0.15)" stroke-width="1"/>
+        </g>
+
+        <!-- Small product bottle (right) -->
+        <g transform="translate(530,300)">
+          <!-- bottle shadow -->
+          <ellipse cx="0" cy="96" rx="30" ry="6" fill="rgba(0,0,0,0.35)"/>
+          <!-- bottle -->
+          <rect x="-18" y="-100" width="36" height="190" rx="10" fill="#2d3a34"/>
+          <!-- neck -->
+          <rect x="-10" y="-118" width="20" height="26" rx="5" fill="#2d3a34"/>
+          <!-- cap -->
+          <rect x="-10" y="-130" width="20" height="16" rx="4" fill="#17181A"/>
+          <!-- label on bottle -->
+          <rect x="-16" y="-50" width="32" height="80" rx="4" fill="#F1E2D2"/>
+          <rect x="-12" y="-40" width="24" height="28" rx="3" fill="#23594A"/>
+          <text x="0" y="-22" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="7" fill="white">PURE</text>
+          <rect x="-12" y="-2" width="24" height="4" rx="2" fill="#DFD8C8"/>
+          <rect x="-12" y="8" width="20" height="4" rx="2" fill="#DFD8C8"/>
+        </g>
+
+        <!-- Small round sticker (lower-left on surface) -->
+        <g transform="translate(90,400) rotate(-8)">
+          <circle r="28" fill="white" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <circle r="22" fill="#B97A4A"/>
+          <text x="0" y="-2" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="7" fill="white">THANK</text>
+          <text x="0" y="8" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="7" fill="white">YOU</text>
+        </g>
+
+        <!-- Light beam from above -->
+        <ellipse cx="280" cy="80" rx="80" ry="20" fill="rgba(255,255,255,0.03)"/>
+      </svg>
+    </div>
+
+    <!-- Copy -->
+    <div class="h2-packaging-copy">
+      <span class="h2-kicker">Packaging &amp; Labelling</span>
+      <h2>Your Packaging Gets One First Impression.</h2>
+      <p>Labels and stickers turn ordinary packaging into something recognisable, memorable, and ready to represent your brand — before anyone opens the box.</p>
+      <div class="h2-cta-row">
+        <a href="materials.html" class="btn btn-primary">Explore Packaging Ideas</a>
+        <a href="gallery.html" class="btn btn-ghost" style="color:rgba(255,255,255,.7); border-color:rgba(255,255,255,.2);">View Gallery</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 7 — CREATOR WALL
+     Horizontal scrollable strip of creative / unusual sticker types
+     =========================================================== -->
+<section class="h2-section" id="creator">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">Print Inspiration</span>
+      <h2>Made for Ideas That Don't Sit Still.</h2>
+      <p style="max-width:48ch;">A small selection of the work that comes through our press — from clean logo stickers to hand-drawn shapes and limited runs.</p>
+    </div>
+  </div>
+
+  <div class="h2-creator-overflow">
+    <div class="h2-creator-strip" id="creatorStrip" role="list" aria-label="Creative sticker examples">
+
+      <!-- Item 1: Illustrated sticker -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#E4EEE9"/>
+          <circle cx="110" cy="110" r="80" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+          <circle cx="110" cy="110" r="66" fill="#23594A"/>
+          <!-- leaf illustration -->
+          <path d="M110 60 C140 80 145 140 110 155 C75 140 80 80 110 60 Z" fill="rgba(255,255,255,0.2)"/>
+          <text x="110" y="106" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="14" fill="white">FLORA</text>
+          <text x="110" y="122" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="9" letter-spacing="2" fill="rgba(255,255,255,0.7)">BOTANICAL</text>
+        </svg>
+        <div class="h2-creator-item-cap">Flora Botanicals
+          <div class="h2-creator-item-sub">Round · Clear label</div>
+        </div>
+      </div>
+
+      <!-- Item 2: Bold typography sticker -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#17181A"/>
+          <rect x="20" y="40" width="180" height="140" rx="8" fill="white"/>
+          <text x="110" y="100" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="34" fill="#17181A">WAVE</text>
+          <rect x="30" y="116" width="160" height="4" rx="2" fill="#E13B2E"/>
+          <text x="110" y="148" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="14" letter-spacing="4" fill="#4B4C4E">RECORDS</text>
+        </svg>
+        <div class="h2-creator-item-cap">Wave Records
+          <div class="h2-creator-item-sub">Square · Matte vinyl</div>
+        </div>
+      </div>
+
+      <!-- Item 3: Die-cut custom shape -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#F1E2D2"/>
+          <!-- custom blob shape -->
+          <path d="M110 30 C150 30 180 60 185 95 C190 130 170 170 140 185 C120 195 90 195 70 180 C45 162 35 130 40 95 C46 58 74 30 110 30 Z" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+          <path d="M110 44 C146 44 168 68 172 97 C176 128 159 162 136 174 C118 184 94 184 76 171 C55 156 46 128 50 97 C56 66 78 44 110 44 Z" fill="#B97A4A"/>
+          <text x="110" y="106" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="14" fill="white">HARVEST</text>
+          <text x="110" y="122" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="9" letter-spacing="2" fill="rgba(255,255,255,0.7)">HONEY CO.</text>
+        </svg>
+        <div class="h2-creator-item-cap">Harvest Honey Co.
+          <div class="h2-creator-item-sub">Die-cut · Matte paper</div>
+        </div>
+      </div>
+
+      <!-- Item 4: Event badge -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#E13B2E"/>
+          <!-- hexagonal badge -->
+          <polygon points="110,30 170,65 170,135 110,170 50,135 50,65" fill="white" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+          <polygon points="110,44 156,70 156,122 110,148 64,122 64,70" fill="#17181A"/>
+          <text x="110" y="98" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="11" fill="white">MAKER</text>
+          <text x="110" y="114" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="11" fill="#E13B2E">FEST</text>
+          <text x="110" y="130" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="rgba(255,255,255,0.6)">2026</text>
+        </svg>
+        <div class="h2-creator-item-cap">MakerFest Event
+          <div class="h2-creator-item-sub">Die-cut hex · Gloss vinyl</div>
+        </div>
+      </div>
+
+      <!-- Item 5: Laptop sticker -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#EEEAE0"/>
+          <!-- laptop outline -->
+          <rect x="30" y="50" width="160" height="100" rx="6" fill="#2a2d30"/>
+          <rect x="38" y="58" width="144" height="84" rx="3" fill="#1a1c1e"/>
+          <!-- sticker on laptop -->
+          <circle cx="110" cy="100" r="30" fill="white"/>
+          <circle cx="110" cy="100" r="24" fill="#23594A"/>
+          <text x="110" y="97" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="9" fill="white">CIRCUIT</text>
+          <text x="110" y="108" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="9" fill="white">LAB</text>
+          <!-- laptop base -->
+          <rect x="20" y="152" width="180" height="12" rx="3" fill="#2a2d30"/>
+        </svg>
+        <div class="h2-creator-item-cap">Circuit Lab
+          <div class="h2-creator-item-sub">Round · Weatherproof vinyl</div>
+        </div>
+      </div>
+
+      <!-- Item 6: Small business logo -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#F6F3EC"/>
+          <rect x="20" y="30" width="180" height="160" rx="10" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+          <rect x="36" y="50" width="148" height="72" rx="6" fill="#17181A"/>
+          <text x="110" y="84" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="20" fill="white">EMBER</text>
+          <text x="110" y="102" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="9" letter-spacing="3" fill="rgba(255,255,255,0.6)">CANDLES</text>
+          <rect x="36" y="138" width="100" height="6" rx="3" fill="#DFD8C8"/>
+          <rect x="36" y="152" width="70" height="6" rx="3" fill="#DFD8C8"/>
+          <circle cx="160" cy="152" r="16" fill="#E13B2E"/>
+          <text x="160" y="156" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="9" fill="white">NEW</text>
+        </svg>
+        <div class="h2-creator-item-cap">Ember Candles
+          <div class="h2-creator-item-sub">Rectangle · Soft-touch matte</div>
+        </div>
+      </div>
+
+      <!-- Item 7: Limited edition -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#17181A"/>
+          <!-- holographic / foil treatment -->
+          <defs>
+            <linearGradient id="holoG" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C8A040"/>
+              <stop offset="33%" stop-color="#A0C840"/>
+              <stop offset="66%" stop-color="#40A0C8"/>
+              <stop offset="100%" stop-color="#C840A0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="110" cy="110" r="80" fill="url(#holoG)" opacity="0.85"/>
+          <circle cx="110" cy="110" r="66" fill="rgba(0,0,0,0.55)"/>
+          <text x="110" y="104" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="white">LIMITED</text>
+          <text x="110" y="120" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="white">EDITION</text>
+          <text x="110" y="138" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="rgba(255,255,255,0.5)">No. 042 / 200</text>
+        </svg>
+        <div class="h2-creator-item-cap">Nova Studio
+          <div class="h2-creator-item-sub">Round · Holographic foil</div>
+        </div>
+      </div>
+
+      <!-- Item 8: Geometric -->
+      <div class="h2-creator-item" role="listitem">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+          <rect width="220" height="220" fill="#2d5c46"/>
+          <!-- octagon -->
+          <polygon points="110,30 160,52 178,105 160,158 110,180 60,158 42,105 60,52" fill="white" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <polygon points="110,44 150,63 165,105 150,147 110,166 70,147 55,105 70,63" fill="#2d5c46"/>
+          <text x="110" y="98" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="white">SUMMIT</text>
+          <text x="110" y="114" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="13" fill="white">SPIRITS</text>
+          <text x="110" y="134" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="9" letter-spacing="2" fill="rgba(255,255,255,0.5)">EST. 2018</text>
+        </svg>
+        <div class="h2-creator-item-cap">Summit Spirits
+          <div class="h2-creator-item-sub">Die-cut oct · Gloss vinyl</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="h2-creator-hint">&#8592; scroll to explore &nbsp; &rarr;</p>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 8 — YOU BRING THE IDEA
+     Human-centred confidence builder. Large visual + warm copy.
+     =========================================================== -->
+<section class="h2-section-alt" id="human">
+  <div class="wrap">
+    <div class="h2-human-layout">
+
+      <!-- Visual: Artwork table -->
+      <div class="h2-human-visual reveal">
+        <svg viewBox="0 0 500 525" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <rect width="500" height="525" fill="#F1E2D2"/>
+          <!-- grid paper underneath -->
+          <g stroke="rgba(180,122,74,0.08)" stroke-width="1">
+            <line x1="0" y1="20" x2="500" y2="20"/><line x1="0" y1="40" x2="500" y2="40"/>
+            <line x1="0" y1="60" x2="500" y2="60"/><line x1="0" y1="80" x2="500" y2="80"/>
+            <line x1="0" y1="100" x2="500" y2="100"/><line x1="0" y1="120" x2="500" y2="120"/>
+            <line x1="0" y1="140" x2="500" y2="140"/><line x1="0" y1="160" x2="500" y2="160"/>
+            <line x1="0" y1="180" x2="500" y2="180"/><line x1="0" y1="200" x2="500" y2="200"/>
+            <line x1="0" y1="220" x2="500" y2="220"/><line x1="0" y1="240" x2="500" y2="240"/>
+            <line x1="0" y1="260" x2="500" y2="260"/><line x1="0" y1="280" x2="500" y2="280"/>
+            <line x1="0" y1="300" x2="500" y2="300"/><line x1="0" y1="320" x2="500" y2="320"/>
+            <line x1="0" y1="340" x2="500" y2="340"/><line x1="0" y1="360" x2="500" y2="360"/>
+            <line x1="0" y1="380" x2="500" y2="380"/><line x1="0" y1="400" x2="500" y2="400"/>
+            <line x1="0" y1="420" x2="500" y2="420"/><line x1="0" y1="440" x2="500" y2="440"/>
+            <line x1="0" y1="460" x2="500" y2="460"/><line x1="0" y1="480" x2="500" y2="480"/>
+            <line x1="0" y1="500" x2="500" y2="500"/>
+            <line x1="20" y1="0" x2="20" y2="525"/><line x1="40" y1="0" x2="40" y2="525"/>
+            <line x1="60" y1="0" x2="60" y2="525"/><line x1="80" y1="0" x2="80" y2="525"/>
+            <line x1="100" y1="0" x2="100" y2="525"/><line x1="120" y1="0" x2="120" y2="525"/>
+            <line x1="140" y1="0" x2="140" y2="525"/><line x1="160" y1="0" x2="160" y2="525"/>
+            <line x1="180" y1="0" x2="180" y2="525"/><line x1="200" y1="0" x2="200" y2="525"/>
+            <line x1="220" y1="0" x2="220" y2="525"/><line x1="240" y1="0" x2="240" y2="525"/>
+            <line x1="260" y1="0" x2="260" y2="525"/><line x1="280" y1="0" x2="280" y2="525"/>
+            <line x1="300" y1="0" x2="300" y2="525"/><line x1="320" y1="0" x2="320" y2="525"/>
+            <line x1="340" y1="0" x2="340" y2="525"/><line x1="360" y1="0" x2="360" y2="525"/>
+            <line x1="380" y1="0" x2="380" y2="525"/><line x1="400" y1="0" x2="400" y2="525"/>
+            <line x1="420" y1="0" x2="420" y2="525"/><line x1="440" y1="0" x2="440" y2="525"/>
+            <line x1="460" y1="0" x2="460" y2="525"/><line x1="480" y1="0" x2="480" y2="525"/>
+          </g>
+          <!-- Sketch / artwork in progress -->
+          <g transform="translate(80,70) rotate(-2)">
+            <rect x="-60" y="-50" width="340" height="380" rx="6" fill="white" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+            <!-- sketch circle of logo -->
+            <circle cx="110" cy="80" r="60" fill="none" stroke="#B97A4A" stroke-width="2" stroke-dasharray="5 3"/>
+            <circle cx="110" cy="80" r="46" fill="none" stroke="rgba(185,122,74,0.4)" stroke-width="1" stroke-dasharray="3 4"/>
+            <!-- pencil text annotations -->
+            <text x="110" y="75" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="14" fill="#17181A">YOUR</text>
+            <text x="110" y="92" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="14" fill="#17181A">IDEA</text>
+            <!-- annotation arrows -->
+            <line x1="168" y1="80" x2="200" y2="60" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <text x="210" y="58" font-family="Archivo,sans-serif" font-weight="600" font-size="10" fill="rgba(0,0,0,0.4)">round</text>
+            <line x1="110" y1="140" x2="110" y2="165" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+            <text x="110" y="178" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="600" font-size="10" fill="rgba(0,0,0,0.4)">38mm diam.</text>
+            <!-- text specs below circle -->
+            <rect x="-40" y="200" width="280" height="7" rx="3.5" fill="#F1E2D2"/>
+            <rect x="-40" y="218" width="220" height="7" rx="3.5" fill="#F1E2D2"/>
+            <rect x="-40" y="236" width="180" height="7" rx="3.5" fill="#F1E2D2"/>
+            <rect x="-40" y="254" width="240" height="7" rx="3.5" fill="#F1E2D2"/>
+            <rect x="-40" y="272" width="160" height="7" rx="3.5" fill="#F1E2D2"/>
+            <rect x="-40" y="290" width="200" height="7" rx="3.5" fill="#F1E2D2"/>
+          </g>
+          <!-- pen on desk -->
+          <g transform="translate(410,300) rotate(30)">
+            <rect x="-5" y="-90" width="10" height="180" rx="3" fill="#2a2d30"/>
+            <polygon points="0,-106 -5,-90 5,-90" fill="#E13B2E"/>
+            <rect x="-5" y="82" width="10" height="14" rx="2" fill="#C0A0A0"/>
+          </g>
+          <!-- sticky note -->
+          <g transform="translate(390,80) rotate(4)">
+            <rect x="-50" y="-40" width="100" height="80" rx="3" fill="#F0D060" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+            <text x="0" y="-16" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">Vinyl</text>
+            <text x="0" y="-4" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">Matte</text>
+            <text x="0" y="8" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#4B4C4E">3x3 in</text>
+            <text x="0" y="24" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="#B97A4A">500 pcs</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Copy -->
+      <div class="h2-human-copy reveal">
+        <span class="h2-kicker">For Every Level of Print Experience</span>
+        <h2>You Bring the Idea.<span> We Help Make It Physical.</span></h2>
+        <p>You don't need to know every technical detail before starting. Tell us what you're making, show us your artwork, and we'll help you work through the print details — from material to cut type to finish.</p>
+        <div class="h2-human-assurance">
+          <div class="h2-assurance-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 12 L9 17 L20 6"/></svg>
+            Artwork guidance included with every order
+          </div>
+          <div class="h2-assurance-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 12 L9 17 L20 6"/></svg>
+            Free digital proof before we print anything
+          </div>
+          <div class="h2-assurance-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 12 L9 17 L20 6"/></svg>
+            Material samples available on request
+          </div>
+          <div class="h2-assurance-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 12 L9 17 L20 6"/></svg>
+            1 business day response on every inquiry
+          </div>
+        </div>
+        <div class="h2-cta-row">
+          <a href="contact.html" class="btn btn-primary">Talk to Our Print Team</a>
+          <a href="contact.html#quote" class="btn btn-ghost">Upload Artwork</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 9 — EDITORIAL TESTIMONIAL WALL
+     1 large quote + 4 customer name rows
+     =========================================================== -->
+<section class="h2-section" id="proof">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="h2-kicker">From Our Clients</span>
+      <h2>People Who've Made It Physical.</h2>
+    </div>
+
+    <div class="h2-proof-layout reveal">
+
+      <!-- Large quote -->
+      <div class="h2-proof-quote">
+        <span class="h2-proof-quotemark" aria-hidden="true">&ldquo;</span>
+        <p class="h2-proof-text">The finished labels looked exactly like the brand we had in our heads. We ordered 500 and sold out in two weeks — people kept asking where we got them printed.</p>
+        <div class="h2-proof-byline">
+          <span class="h2-proof-name">Amara Osei</span>
+          <span class="h2-proof-biz">Founder · Harvest Honey Co.</span>
+        </div>
+      </div>
+
+      <!-- Name wall -->
+      <div class="h2-proof-names">
+        <div class="h2-proof-names-head">Also trusted by</div>
+
+        <div class="h2-proof-name-item">
+          <div class="h2-proof-avatar" aria-hidden="true">E</div>
+          <div>
+            <div class="h2-proof-item-name">Elena Torres</div>
+            <div class="h2-proof-item-biz">Ember Candles · Product labels &amp; seals</div>
+          </div>
+        </div>
+
+        <div class="h2-proof-name-item">
+          <div class="h2-proof-avatar" aria-hidden="true">J</div>
+          <div>
+            <div class="h2-proof-item-name">James Hollis</div>
+            <div class="h2-proof-item-biz">Roots Coffee Co. · Packaging labels</div>
+          </div>
+        </div>
+
+        <div class="h2-proof-name-item">
+          <div class="h2-proof-avatar" aria-hidden="true">S</div>
+          <div>
+            <div class="h2-proof-item-name">Studio Wavelength</div>
+            <div class="h2-proof-item-biz">Creative agency · Event stickers &amp; die-cuts</div>
+          </div>
+        </div>
+
+        <div class="h2-proof-name-item">
+          <div class="h2-proof-avatar" aria-hidden="true">F</div>
+          <div>
+            <div class="h2-proof-item-name">Flora Botanicals</div>
+            <div class="h2-proof-item-biz">Skincare brand · Clear bottle labels</div>
+          </div>
+        </div>
+
+        <div class="h2-proof-name-item">
+          <div class="h2-proof-avatar" aria-hidden="true">N</div>
+          <div>
+            <div class="h2-proof-item-name">Nova Cosmetics</div>
+            <div class="h2-proof-item-biz">Beauty brand · Holographic foil labels</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================================
+     SECTION 10 — FINAL CREATIVE STATEMENT
+     Large typographic closing with sticker visual
+     =========================================================== -->
+<section class="h2-statement" id="statement">
+  <div class="wrap">
+    <div class="h2-statement-inner">
+
+      <div class="h2-statement-copy reveal">
+        <span class="h2-kicker">Start Here</span>
+        <h2>Good Ideas Deserve a Physical Form.</h2>
+        <p>From the first sketch to the final sticker, make something people can see, touch, and remember. We handle the print — you handle the idea.</p>
+        <div class="h2-cta-row">
+          <a href="contact.html#quote" class="btn btn-primary">Start Your Custom Order</a>
+          <a href="contact.html" class="btn btn-ghost">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="h2-statement-visual reveal">
+        <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+          <!-- layered sticker composition -->
+          <!-- background larger circle -->
+          <circle cx="170" cy="170" r="155" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+
+          <!-- Sticker 1 (bottom layer, rotated) -->
+          <g transform="translate(170,170) rotate(-12)">
+            <circle r="120" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <circle r="104" fill="#EEEAE0"/>
+          </g>
+
+          <!-- Sticker 2 (mid layer) -->
+          <g transform="translate(170,170) rotate(6)">
+            <rect x="-96" y="-96" width="192" height="192" rx="16" fill="white" stroke="#DFD8C8" stroke-width="1.5"/>
+            <rect x="-80" y="-80" width="160" height="160" rx="10" fill="#F1E2D2"/>
+          </g>
+
+          <!-- Sticker 3 (top — branded) -->
+          <g transform="translate(170,170) rotate(-4)">
+            <circle r="88" fill="white" stroke="#DFD8C8" stroke-width="2"/>
+            <circle r="74" fill="#E13B2E"/>
+            <!-- shine -->
+            <ellipse cx="-22" cy="-28" rx="30" ry="18" fill="rgba(255,255,255,0.15)" transform="rotate(-20)"/>
+            <text x="0" y="-6" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="20" fill="white">YOUR</text>
+            <text x="0" y="16" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="20" fill="white">BRAND</text>
+            <!-- peel shadow at edge -->
+            <path d="M65 55 Q75 48 73 68 Q58 72 57 60 Z" fill="rgba(0,0,0,0.12)"/>
+          </g>
+
+          <!-- Small annotation -->
+          <text x="280" y="55" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="9" fill="var(--ink-soft)" letter-spacing="1">STICKPRO</text>
+          <line x1="250" y1="57" x2="236" y2="78" stroke="var(--line)" stroke-width="1"/>
+          <circle cx="235" cy="79" r="2" fill="var(--line)"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#FFFFFF"/>
+            <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+          </svg>
+          <span>StickPro</span>
+        </a>
+        <p>High-quality custom stickers and labels for businesses, creators and everyone in between.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 20 L13 8 M11 14 C13.5 14 15 12.3 15 10 C15 8 13.3 7 11.5 7 C9 7 7.5 9 7.5 11"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3 C15 6 17 8 20 8 M15 3 V15 A4 4 0 1 1 11 11"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html#product-labels">Product Labels</a></li>
+          <li><a href="products.html#barcode-stickers">Barcode Stickers</a></li>
+          <li><a href="products.html#die-cut-stickers">Die-Cut Stickers</a></li>
+          <li><a href="products.html#wall-decals">Wall Decals</a></li>
+          <li><a href="products.html#custom-promotional">Custom Shape Labels</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="materials.html">Materials &amp; Finishes</a></li>
+          <li><a href="contact.html">Artwork Guide</a></li>
+          <li><a href="contact.html">Bulk Pricing</a></li>
+          <li><a href="contact.html">FAQs</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Keep in touch</h4>
+        <p style="color:rgba(255,255,255,.6); font-size:14.5px; margin:0;">Get print tips and new product drops in your inbox.</p>
+        <form onsubmit="return false;">
+          <label for="h2FooterEmail" style="position:absolute;left:-9999px;">Email address</label>
+          <input id="h2FooterEmail" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 StickPro. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

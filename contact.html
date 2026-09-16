@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Quote — StickPro Custom Sticker Printing</title>
+<meta name="description" content="Get in touch with StickPro — request a custom sticker or label quote, upload your artwork, visit our print studio, or request a material sample kit.">
+<link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+        <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+      </svg>
+      <span>StickPro<span class="logo-sub">Custom Stickers &amp; Labels</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="materials.html">Materials &amp; Finishes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="current">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-util-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="header-util-btn dir-toggle" id="dirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+      </button>
+
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="home2.html">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="materials.html">Materials &amp; Finishes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="current">Contact</a>
+    <div class="mobile-nav-utils">
+      <button class="header-util-btn theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="util-label">Theme</span>
+      </button>
+      <button class="header-util-btn dir-toggle" id="dirToggleMobile" aria-label="Switch layout direction" title="Toggle direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+        <span class="util-label">Direction</span>
+      </button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="wrap">
+    <div class="contact-hero-inner reveal">
+      <span class="kicker">Get in Touch</span>
+      <h1>Let's Talk Print &amp; Materials.</h1>
+      <p class="lede">Request a custom quote, order a material sample kit, or speak directly with our prepress team — we respond to every inquiry within one business day.</p>
+    </div>
+    <hr class="contact-hero-divider">
+  </div>
+</section>
+
+<!-- CONTACT WORKBENCH: Info + Form -->
+<section id="quote">
+  <div class="wrap">
+    <div class="contact-workbench">
+
+      <!-- LEFT: Studio Info -->
+      <div class="contact-info reveal">
+
+        <div class="contact-info-block">
+          <div class="contact-info-label">Workshop Address</div>
+          <div class="contact-address">
+            <strong>StickPro Print Studio</strong>
+            420 Printmakers Row<br>
+            Industrial Quarter, Suite 104<br>
+            Cape Town, 8001
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <div class="contact-info-label">Studio Hours</div>
+          <div class="contact-hours">
+            <div class="contact-hour-row"><span class="day">Monday – Friday</span><span class="time">08:00 – 18:30</span></div>
+            <div class="contact-hour-row"><span class="day">Saturday</span><span class="time">09:00 – 14:00</span></div>
+            <div class="contact-hour-row"><span class="day">Sunday</span><span class="time closed">Closed</span></div>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <div class="contact-info-label">Direct Contact</div>
+          <div class="contact-links">
+            <a href="tel:+27211234567" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15v1.92z"/></svg>
+              <div class="contact-link-text">
+                <span>Studio Phone</span>
+                <span class="contact-link-main">+27 21 123 4567</span>
+              </div>
+            </a>
+            <a href="mailto:hello@stickpro.co.za" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div class="contact-link-text">
+                <span>Email</span>
+                <span class="contact-link-main">hello@stickpro.co.za</span>
+              </div>
+            </a>
+            <a href="https://wa.me/27211234567" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              <div class="contact-link-text">
+                <span>WhatsApp</span>
+                <span class="contact-link-main">Chat with us</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="turnaround-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <h4>Turnaround Guarantee</h4>
+            <p>Standard orders: 2–4 business days. Rush production available on request — ask us when you submit your inquiry.</p>
+          </div>
+        </div>
+
+        <div class="sample-pack-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          <div>
+            <h4>Free Material Sample Kit</h4>
+            <p>Not sure which material is right for you? <a href="#sampleRequest">Request a free physical swatch envelope</a> — we'll post one out to you.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Inquiry Form -->
+      <div class="contact-form-wrap reveal">
+        <h3>Request a Quote or Proof</h3>
+        <p>Tell us about your project and we'll come back with pricing, timelines, and a material recommendation.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+              <input id="fullName" name="fullName" type="text" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="emailAddr">Email Address <span aria-hidden="true">*</span></label>
+              <input id="emailAddr" name="emailAddr" type="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phoneNum">Phone (Optional)</label>
+              <input id="phoneNum" name="phoneNum" type="tel" placeholder="+27 XX XXX XXXX" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="projectType">Project Type <span aria-hidden="true">*</span></label>
+              <select id="projectType" name="projectType" required>
+                <option value="" disabled selected>Select project type</option>
+                <option value="product-labels">Product Labels</option>
+                <option value="die-cut">Die-Cut Stickers</option>
+                <option value="holographic">Holographic / Foil</option>
+                <option value="clear-labels">Clear Labels</option>
+                <option value="wall-decals">Wall Decals</option>
+                <option value="packaging">Packaging &amp; Seals</option>
+                <option value="sample-pack">Sample Pack Request</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="materialPref">Material Preference</label>
+              <select id="materialPref" name="materialPref">
+                <option value="" disabled selected>Material (optional)</option>
+                <option value="paper">Uncoated Paper</option>
+                <option value="vinyl">White Vinyl</option>
+                <option value="clear">Clear / Transparent</option>
+                <option value="matte">Matte Laminate</option>
+                <option value="gloss">Gloss Laminate</option>
+                <option value="weather">Weather-Resistant</option>
+                <option value="unsure">Not sure — advise me</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Estimated Quantity <span aria-hidden="true">*</span></label>
+              <select id="quantity" name="quantity" required>
+                <option value="" disabled selected>Select quantity range</option>
+                <option value="1-50">1 – 50</option>
+                <option value="51-250">51 – 250</option>
+                <option value="251-1000">251 – 1,000</option>
+                <option value="1001-5000">1,001 – 5,000</option>
+                <option value="5000+">5,000+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" id="sampleRequest">
+            <label for="projectNotes">Project Notes</label>
+            <textarea id="projectNotes" name="projectNotes" placeholder="Dimensions, shape, colours, finish preference, deadline, or anything else we should know..." rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="artworkUpload">Artwork Upload (Optional)</label>
+            <div class="file-drop" id="fileDrop">
+              <input type="file" id="artworkUpload" name="artworkUpload" accept=".pdf,.ai,.eps,.png,.jpg,.svg" aria-label="Upload artwork file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <h4>Drop your artwork here</h4>
+              <p>PDF, AI, EPS, PNG, JPG or SVG — max 50 MB</p>
+              <div class="file-drop-status" id="fileDropStatus" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            Send Inquiry &amp; Request Proof
+          </button>
+          <p class="form-note">We respond to every inquiry within 1 business day. No spam, ever.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess" role="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Inquiry Received!</h3>
+          <p>Thanks — we'll review your project and come back within one business day with pricing and material options.</p>
+          <a href="materials.html" class="btn btn-ghost">Explore Materials While You Wait</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="contact-map-section">
+  <div class="wrap">
+    <div class="contact-map-head">
+      <h2>Find Our Print Studio</h2>
+      <a href="https://maps.google.com/?q=420+Printmakers+Row+Cape+Town" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+        Get Driving Directions
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:16px;height:16px;" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg>
+      </a>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=18.3800%2C-33.9800%2C18.4600%2C-33.9200&amp;layer=mapnik&amp;marker=-33.9450%2C18.4200"
+        loading="lazy"
+        title="StickPro Print Studio — 420 Printmakers Row, Cape Town"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FAQ -->
+<section class="contact-faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:32px;">
+      <span class="kicker">Quick Answers</span>
+      <h2>Common Questions.</h2>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <div class="faq-q">How quickly do you turn around orders?</div>
+        <div class="faq-a">Standard production is 2–4 business days from artwork approval. Rush options are available — mention your deadline when you submit your inquiry and we'll confirm availability.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a minimum order quantity?</div>
+        <div class="faq-a">We work with orders as small as a single sheet. For best unit pricing, orders of 250+ tend to offer the most value. We'll include a pricing breakdown with your quote.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What file format do you need for artwork?</div>
+        <div class="faq-a">We accept PDF, AI, EPS, SVG, PNG, and JPG. Vector formats (PDF, AI, EPS, SVG) give the sharpest results. All artwork should be set up at print size, 300 DPI minimum.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I get a physical material sample before ordering?</div>
+        <div class="faq-a">Yes. Request a free swatch envelope through the inquiry form above. We'll post a selection of materials and finishes to you so you can assess them in person before committing to a run.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" id="footer-contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#FFFFFF"/>
+            <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+          </svg>
+          <span>StickPro</span>
+        </a>
+        <p>High-quality custom stickers and labels for businesses, creators and everyone in between.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 20 L13 8 M11 14 C13.5 14 15 12.3 15 10 C15 8 13.3 7 11.5 7 C9 7 7.5 9 7.5 11"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3 C15 6 17 8 20 8 M15 3 V15 A4 4 0 1 1 11 11"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html#product-labels">Product Labels</a></li>
+          <li><a href="products.html#barcode-stickers">Barcode Stickers</a></li>
+          <li><a href="products.html#die-cut-stickers">Die-Cut Stickers</a></li>
+          <li><a href="products.html#wall-decals">Wall Decals</a></li>
+          <li><a href="products.html#custom-promotional">Custom Shape Labels</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="materials.html">Materials &amp; Finishes</a></li>
+          <li><a href="contact.html">Artwork Guide</a></li>
+          <li><a href="contact.html">Bulk Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Keep in touch</h4>
+        <p style="color:rgba(255,255,255,.6); font-size:14.5px; margin:0;">Get print tips and new product drops in your inbox.</p>
+        <form onsubmit="return false;">
+          <label for="ftrEmail" style="position:absolute;left:-9999px;">Email address</label>
+          <input id="ftrEmail" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 StickPro. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

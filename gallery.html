@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — StickPro Print Archive &amp; Inspiration</title>
+<meta name="description" content="Browse StickPro's print archive — real product labels, die-cut stickers, clear bottle labels, holographic foil and packaging seals printed in our studio.">
+<link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+        <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+      </svg>
+      <span>StickPro<span class="logo-sub">Custom Stickers &amp; Labels</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="materials.html">Materials &amp; Finishes</a>
+      <a href="gallery.html" class="current">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-util-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="header-util-btn dir-toggle" id="dirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+      </button>
+
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="home2.html">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="materials.html">Materials &amp; Finishes</a>
+    <a href="gallery.html" class="current">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-nav-utils">
+      <button class="header-util-btn theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="util-label">Theme</span>
+      </button>
+      <button class="header-util-btn dir-toggle" id="dirToggleMobile" aria-label="Switch layout direction" title="Toggle direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+        <span class="util-label">Direction</span>
+      </button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- GALLERY HERO -->
+<section class="gallery-hero">
+  <div class="wrap">
+    <div class="gallery-hero-inner reveal">
+      <span class="kicker">Print Archive &amp; Inspiration</span>
+      <h1>Real Stickers. Real Finishes. Out in the World.</h1>
+      <p class="lede">Browse product packaging, die-cut runs, holographic promos, and clear bottle labels printed right in our studio.</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="gallery-filter-bar" role="group" aria-label="Gallery category filters">
+      <button class="gallery-filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+      <button class="gallery-filter-btn" data-filter="product-labels" id="filter-product">Product Labels</button>
+      <button class="gallery-filter-btn" data-filter="die-cut" id="filter-diecut">Die-Cut Stickers</button>
+      <button class="gallery-filter-btn" data-filter="clear-labels" id="filter-clear">Clear Labels</button>
+      <button class="gallery-filter-btn" data-filter="holographic" id="filter-holo">Holographic &amp; Foil</button>
+      <button class="gallery-filter-btn" data-filter="packaging" id="filter-packaging">Packaging &amp; Seals</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID: 4×6 -->
+<section class="gallery-section">
+  <div class="wrap">
+    <div class="gallery-grid" id="galleryGrid" aria-label="Gallery of printed sticker and label projects">
+
+        <div class="gallery-item" data-category="product-labels" id="gi1">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#F1E2D2"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">HONEY CO. PRODUCT LABEL</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B97A4A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Honey Co. Product Label</div>
+          </div>
+          <div class="gallery-item-tag">Matte Vinyl</div>
+        </div>
+        <div class="gallery-item" data-category="die-cut" id="gi2">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#1e2020"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">VELOCITY SPORTS</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#E13B2E" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Velocity Sports — Die-Cut</div>
+          </div>
+          <div class="gallery-item-tag">White Vinyl</div>
+        </div>
+        <div class="gallery-item" data-category="clear-labels" id="gi3">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#e8e0d0"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,255,255,0.15)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(255,255,255,0.9)">FLORA BOTANICALS</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(255,255,255,0.5)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Flora Botanicals — Clear</div>
+          </div>
+          <div class="gallery-item-tag">Clear PET</div>
+        </div>
+        <div class="gallery-item" data-category="holographic" id="gi4">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#17181A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(200,180,80,0.4)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#F0D070">AURORA COSMETICS</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#C8B840" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Aurora Cosmetics — Foil</div>
+          </div>
+          <div class="gallery-item-tag">Gold Foil</div>
+        </div>
+        <div class="gallery-item" data-category="packaging" id="gi5">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#EEEAE0"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">BLOOM BAKERY</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B97A4A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Bloom Bakery — Seal</div>
+          </div>
+          <div class="gallery-item-tag">Kraft Paper</div>
+        </div>
+        <div class="gallery-item" data-category="product-labels" id="gi6">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#1a3a2e"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">ROOTS COFFEE</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#23594A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Roots Coffee — Label</div>
+          </div>
+          <div class="gallery-item-tag">Gloss UV</div>
+        </div>
+        <div class="gallery-item" data-category="die-cut" id="gi7">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#E13B2E"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">STORM SOUND</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#E13B2E" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Storm Sound — Logo Sticker</div>
+          </div>
+          <div class="gallery-item-tag">Matte Vinyl</div>
+        </div>
+        <div class="gallery-item" data-category="clear-labels" id="gi8">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#2d5c46"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(255,255,255,0.9)">SUMMIT SPIRITS</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(255,255,255,0.4)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Summit Spirits — Clear</div>
+          </div>
+          <div class="gallery-item-tag">Clear PET</div>
+        </div>
+        <div class="gallery-item" data-category="holographic" id="gi9">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#EEEAE0"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="linear-gradient(135deg,#c8b870,#f0e098)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">PRISM STUDIO</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#C8B840" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Prism Studio — Holo</div>
+          </div>
+          <div class="gallery-item-tag">Holographic</div>
+        </div>
+        <div class="gallery-item" data-category="packaging" id="gi10">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#F6F3EC"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#EEEAE0" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">FIELD NOTES</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B97A4A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Field Notes — Packaging</div>
+          </div>
+          <div class="gallery-item-tag">Soft-Touch</div>
+        </div>
+        <div class="gallery-item" data-category="product-labels" id="gi11">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#17181A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#2a2d2f" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#FFFFFF">EMBER CANDLES</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(255,255,255,0.3)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Ember Candles — Label</div>
+          </div>
+          <div class="gallery-item-tag">Matte Linen</div>
+        </div>
+        <div class="gallery-item" data-category="die-cut" id="gi12">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#23594A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">CIRCUIT LAB</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#23594A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Circuit Lab — Die-Cut</div>
+          </div>
+          <div class="gallery-item-tag">White Vinyl</div>
+        </div>
+        <div class="gallery-item hidden" data-category="clear-labels" id="gi13">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#F1E2D2"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(255,255,255,0.9)">LUMIERE SKIN</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(255,255,255,0.4)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Lumiere Skin — Clear</div>
+          </div>
+          <div class="gallery-item-tag">Ultra-Clear</div>
+        </div>
+        <div class="gallery-item hidden" data-category="holographic" id="gi14">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#1e2020"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(180,200,220,0.4)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(220,235,255,0.9)">WAVELENGTH</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(180,200,220,0.6)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Wavelength — Foil Label</div>
+          </div>
+          <div class="gallery-item-tag">Silver Foil</div>
+        </div>
+        <div class="gallery-item hidden" data-category="packaging" id="gi15">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#EFE9DC"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">CLAY & CO</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B97A4A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Clay & Co — Box Seal</div>
+          </div>
+          <div class="gallery-item-tag">Kraft Paper</div>
+        </div>
+        <div class="gallery-item hidden" data-category="product-labels" id="gi16">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#2d5c46"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">VERDE JUICE</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#23594A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Verde Juice — Label</div>
+          </div>
+          <div class="gallery-item-tag">Gloss UV</div>
+        </div>
+        <div class="gallery-item hidden" data-category="die-cut" id="gi17">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#17181A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#1e2020" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#FFFFFF">NIGHTHAWK</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#E13B2E" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Nighthawk — Sticker</div>
+          </div>
+          <div class="gallery-item-tag">Matte Vinyl</div>
+        </div>
+        <div class="gallery-item hidden" data-category="clear-labels" id="gi18">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#F6F3EC"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,255,255,0.12)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(0,0,0,0.75)">PURE CO.</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(0,0,0,0.2)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Pure Co. — Label</div>
+          </div>
+          <div class="gallery-item-tag">Transparent</div>
+        </div>
+        <div class="gallery-item hidden" data-category="holographic" id="gi19">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#B97A4A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,220,80,0.3)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">NOVA COSMETICS</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#C8B840" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Nova Cosmetics — Foil</div>
+          </div>
+          <div class="gallery-item-tag">Gold Foil</div>
+        </div>
+        <div class="gallery-item hidden" data-category="packaging" id="gi20">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#EEEAE0"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">CRAFT SOAP</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B97A4A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Craft Soap — Label</div>
+          </div>
+          <div class="gallery-item-tag">Soft-Touch Matte</div>
+        </div>
+        <div class="gallery-item hidden" data-category="product-labels" id="gi21">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#1a3a2e"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">ALPINE COFFEE</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#23594A" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Alpine Coffee — Label</div>
+          </div>
+          <div class="gallery-item-tag">Matte Vinyl</div>
+        </div>
+        <div class="gallery-item hidden" data-category="die-cut" id="gi22">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#E13B2E"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="#FFFFFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="#17181A">SOLSTICE</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="#B92E23" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Solstice — Die-Cut Badge</div>
+          </div>
+          <div class="gallery-item-tag">White Vinyl</div>
+        </div>
+        <div class="gallery-item hidden" data-category="clear-labels" id="gi23">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#D6E8F0"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(30,80,120,0.85)">GLACIER WATER</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(30,80,120,0.3)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Glacier Water — Clear</div>
+          </div>
+          <div class="gallery-item-tag">Ultra-Clear</div>
+        </div>
+        <div class="gallery-item hidden" data-category="holographic" id="gi24">
+          <div class="gallery-img-inner">
+            <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="400" fill="#17181A"/>
+              <rect x="24" y="32" width="252" height="336" rx="10" fill="rgba(180,100,220,0.3)" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+              <text x="150" y="210" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="18" fill="rgba(220,180,255,0.9)">CELESTIAL INK</text>
+              <rect x="60" y="228" width="180" height="5" rx="2.5" fill="rgba(180,100,220,0.5)" opacity="0.35"/>
+              <rect x="85" y="243" width="130" height="4" rx="2" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-item-label">Celestial Ink — Holo</div>
+          </div>
+          <div class="gallery-item-tag">Holographic</div>
+        </div>
+    </div>
+
+    <!-- View More -->
+    <div class="gallery-view-more" id="galleryViewMore">
+      <p class="gallery-count" id="galleryCount">Showing 12 of 24 projects</p>
+      <button class="btn btn-ghost" id="viewMoreBtn" aria-label="Load more gallery items">View More Projects</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY CTA -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="gallery-cta reveal">
+      <div>
+        <h2>Ready to See Your Design in Print?</h2>
+        <p>We handle everything from first proof to finished order. Upload your artwork and get a quote in minutes.</p>
+      </div>
+      <a href="contact.html#quote" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Project detail" aria-hidden="true">
+  <div class="lightbox-inner">
+    <div class="lightbox-visual" id="lbVisual">
+      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" id="lbSvg"><rect width="300" height="400" fill="#F6F3EC"/></svg>
+    </div>
+    <div class="lightbox-info">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close project detail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="lightbox-tag" id="lbTag">Product Labels</div>
+      <div>
+        <h3 id="lbTitle">Project Title</h3>
+        <p id="lbDesc">A premium label printed with attention to every detail — from the surface material to the finish.</p>
+      </div>
+      <dl class="lightbox-specs">
+        <div class="lightbox-spec"><dt>Material</dt><dd id="lbMaterial">Vinyl</dd></div>
+        <div class="lightbox-spec"><dt>Finish</dt><dd id="lbFinish">Matte Laminate</dd></div>
+        <div class="lightbox-spec"><dt>Cut</dt><dd id="lbCut">Die-cut</dd></div>
+        <div class="lightbox-spec"><dt>Environment</dt><dd id="lbEnv">Indoor</dd></div>
+      </dl>
+      <a href="contact.html#quote" class="btn btn-primary">Order Similar</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" id="footer-contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#FFFFFF"/>
+            <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+          </svg>
+          <span>StickPro</span>
+        </a>
+        <p>High-quality custom stickers and labels for businesses, creators and everyone in between.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 20 L13 8 M11 14 C13.5 14 15 12.3 15 10 C15 8 13.3 7 11.5 7 C9 7 7.5 9 7.5 11"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3 C15 6 17 8 20 8 M15 3 V15 A4 4 0 1 1 11 11"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html#product-labels">Product Labels</a></li>
+          <li><a href="products.html#barcode-stickers">Barcode Stickers</a></li>
+          <li><a href="products.html#die-cut-stickers">Die-Cut Stickers</a></li>
+          <li><a href="products.html#wall-decals">Wall Decals</a></li>
+          <li><a href="products.html#custom-promotional">Custom Shape Labels</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="materials.html">Materials &amp; Finishes</a></li>
+          <li><a href="contact.html">Artwork Guide</a></li>
+          <li><a href="contact.html">Bulk Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Keep in touch</h4>
+        <p style="color:rgba(255,255,255,.6); font-size:14.5px; margin:0;">Get print tips and new product drops in your inbox.</p>
+        <form onsubmit="return false;">
+          <label for="ftrEmail" style="position:absolute;left:-9999px;">Email address</label>
+          <input id="ftrEmail" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 StickPro. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

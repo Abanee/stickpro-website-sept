@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StickPro — Custom Sticker &amp; Label Printing</title>
+<meta name="description" content="Custom stickers and labels for products, packaging, promotions and personal projects. Upload your artwork and get a quote in minutes.">
+<link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('stickpro-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('stickpro-direction') || 'ltr';
+        document.documentElement.setAttribute('dir', d);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="header-row">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#17181A"/>
+        <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+      </svg>
+      <span>StickPro<span class="logo-sub">Custom Stickers &amp; Labels</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" class="current">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="materials.html">Materials &amp; Finishes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-util-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button class="header-util-btn dir-toggle" id="dirToggle" aria-label="Switch layout direction" title="Toggle RTL / LTR direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+      </button>
+
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html" class="current">Home</a>
+    <a href="home2.html">Home 2</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="materials.html">Materials &amp; Finishes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-nav-utils">
+      <button class="header-util-btn theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="util-label">Theme</span>
+      </button>
+      <button class="header-util-btn dir-toggle" id="dirToggleMobile" aria-label="Switch layout direction" title="Toggle direction" aria-pressed="false">
+        <span class="dir-toggle-text">RTL</span>
+        <span class="util-label">Direction</span>
+      </button>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="contact.html#login" class="btn btn-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-primary btn-quote">Get a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================================ HERO =============================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="kicker">Custom stickers, bigger possibilities</span>
+        <h1>Stickers that make your <span class="accent">brand</span> stick.</h1>
+        <p class="lede">We design and print custom stickers and labels for products, packaging, promotions, businesses and personal projects — in materials built to survive shelves, weather and everyday handling.</p>
+        <div class="hero-ctas">
+          <a href="#quote" class="btn btn-primary">Get a Quote</a>
+          <a href="#products" class="btn btn-ghost">Explore Products</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" role="img" aria-label="A collection of printed stickers and labels: a product label, a barcode sticker, a die-cut logo sticker, a promotional sticker and a circular sticker">
+        <!-- Product label -->
+        <svg class="sticker s-label" viewBox="0 0 200 260" style="--r:-7deg">
+          <rect x="6" y="6" width="188" height="248" rx="14" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <rect x="24" y="26" width="152" height="70" rx="6" fill="#EEEAE0"/>
+          <text x="100" y="66" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="20" fill="#17181A">HONEST</text>
+          <text x="100" y="82" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="10" fill="#4B4C4E">COLD-PRESSED</text>
+          <rect x="24" y="112" width="152" height="2" fill="#DFD8C8"/>
+          <rect x="24" y="128" width="80" height="8" rx="4" fill="#DFD8C8"/>
+          <rect x="24" y="146" width="110" height="8" rx="4" fill="#DFD8C8"/>
+          <rect x="24" y="164" width="60" height="8" rx="4" fill="#DFD8C8"/>
+          <circle cx="150" cy="210" r="26" fill="#E13B2E"/>
+          <text x="150" y="207" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="10" fill="#fff">100%</text>
+          <text x="150" y="219" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="8" fill="#fff">NATURAL</text>
+        </svg>
+
+        <!-- Barcode sticker -->
+        <svg class="sticker s-barcode" viewBox="0 0 200 130" style="--r:6deg">
+          <rect x="4" y="4" width="192" height="122" rx="10" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <text x="18" y="30" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#17181A">SKU 04521</text>
+          <g fill="#17181A">
+            <rect x="18" y="42" width="3" height="46"/><rect x="25" y="42" width="2" height="46"/><rect x="31" y="42" width="4" height="46"/>
+            <rect x="39" y="42" width="2" height="46"/><rect x="45" y="42" width="3" height="46"/><rect x="52" y="42" width="2" height="46"/>
+            <rect x="58" y="42" width="5" height="46"/><rect x="67" y="42" width="2" height="46"/><rect x="73" y="42" width="3" height="46"/>
+            <rect x="80" y="42" width="2" height="46"/><rect x="86" y="42" width="4" height="46"/><rect x="94" y="42" width="3" height="46"/>
+            <rect x="101" y="42" width="2" height="46"/><rect x="107" y="42" width="5" height="46"/><rect x="116" y="42" width="2" height="46"/>
+            <rect x="122" y="42" width="3" height="46"/><rect x="129" y="42" width="2" height="46"/><rect x="135" y="42" width="4" height="46"/>
+            <rect x="143" y="42" width="3" height="46"/><rect x="150" y="42" width="2" height="46"/><rect x="156" y="42" width="5" height="46"/>
+            <rect x="165" y="42" width="2" height="46"/><rect x="171" y="42" width="3" height="46"/>
+          </g>
+          <text x="100" y="108" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="11" letter-spacing="2" fill="#4B4C4E">8 901234 567890</text>
+        </svg>
+
+        <!-- Die-cut logo sticker -->
+        <svg class="sticker s-die" viewBox="0 0 200 200" style="--r:-4deg">
+          <path d="M100 6 C150 6 190 40 190 96 C190 156 148 194 100 194 C50 194 10 156 10 96 C10 40 50 6 100 6 Z" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <path d="M100 22 C142 22 174 50 174 96 C174 144 140 178 100 178 C58 178 26 144 26 96 C26 50 58 22 100 22 Z" fill="#23594A"/>
+          <path d="M65 108 C78 92 92 128 102 100 C112 74 122 118 136 96" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <text x="100" y="140" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="17" fill="#FFFFFF">GOOD VIBES</text>
+        </svg>
+
+        <!-- Promotional sticker -->
+        <svg class="sticker s-promo" viewBox="0 0 200 170" style="--r:9deg">
+          <path d="M20 40 L60 12 L140 12 L180 40 L172 130 L120 158 L80 158 L28 130 Z" fill="#F1E2D2" stroke="#17181A" stroke-width="2"/>
+          <text x="100" y="76" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="22" fill="#17181A">SUPPORT</text>
+          <text x="100" y="104" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="22" fill="#B97A4A">SMALL</text>
+          <text x="100" y="132" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="22" fill="#17181A">BUSINESS</text>
+        </svg>
+
+        <!-- Circular thank-you sticker -->
+        <svg class="sticker s-circle" viewBox="0 0 200 200" style="--r:-10deg">
+          <circle cx="100" cy="100" r="94" fill="#FFFFFF" stroke="#17181A" stroke-width="2"/>
+          <circle cx="100" cy="100" r="78" fill="#E13B2E"/>
+          <path id="circPath" d="M100,26 a74,74 0 1,1 -0.1,0" fill="none"/>
+          <text font-family="Archivo, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF" letter-spacing="3">
+            <textPath href="#circPath" startOffset="2%">THANK YOU · THANK YOU · THANK YOU ·</textPath>
+          </text>
+          <path d="M78 96 C78 84 96 84 100 96 C104 84 122 84 122 96 C122 112 100 124 100 124 C100 124 78 112 78 96 Z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <ul class="trust-list">
+        <li class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L21 7 V17 L12 22 L3 17 V7 Z"/></svg><span>Custom Shapes</span></li>
+        <li class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12 L12 3 L21 12 L12 21 Z"/></svg><span>Premium Materials</span></li>
+        <li class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L16 14"/></svg><span>Fast Production</span></li>
+        <li class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="14" height="9"/><path d="M16 11 H20 L22 14 V17 H16 Z"/><circle cx="6.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg><span>Bulk Orders</span></li>
+        <li class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 L10 6 L14 16 L17 10 L20 20"/></svg><span>Artwork Support</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POPULAR STICKER TYPES ===================== -->
+<section class="section" id="products">
+  <div class="wrap reveal">
+    <div class="section-head split-head">
+      <div>
+        <h2>Popular sticker types</h2>
+      </div>
+      <a href="products.html" class="btn-arrow">View all products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="types-rail">
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#EEEAE0">
+          <svg viewBox="0 0 100 100"><rect x="18" y="10" width="64" height="80" rx="6" fill="#fff" stroke="#17181A" stroke-width="2"/><rect x="28" y="24" width="44" height="20" fill="#DFD8C8"/><rect x="28" y="52" width="44" height="4" fill="#DFD8C8"/><rect x="28" y="62" width="30" height="4" fill="#DFD8C8"/><rect x="28" y="72" width="36" height="4" fill="#DFD8C8"/></svg>
+        </div>
+        <h4>Product Labels</h4>
+        <p>Perfect for bottles, jars, packaging and cosmetics.</p>
+        <a href="products.html#product-labels" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#F1E2D2">
+          <svg viewBox="0 0 100 100"><rect x="10" y="30" width="80" height="40" rx="4" fill="#fff" stroke="#17181A" stroke-width="2"/><g fill="#17181A"><rect x="18" y="38" width="2" height="24"/><rect x="23" y="38" width="3" height="24"/><rect x="29" y="38" width="2" height="24"/><rect x="35" y="38" width="4" height="24"/><rect x="42" y="38" width="2" height="24"/><rect x="48" y="38" width="3" height="24"/><rect x="55" y="38" width="2" height="24"/><rect x="61" y="38" width="4" height="24"/><rect x="68" y="38" width="2" height="24"/><rect x="74" y="38" width="3" height="24"/><rect x="80" y="38" width="2" height="24"/></g></svg>
+        </div>
+        <h4>Barcode Stickers</h4>
+        <p>Ideal for inventory, retail and logistics tracking.</p>
+        <a href="products.html#barcode-stickers" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#E4EEE9">
+          <svg viewBox="0 0 100 100"><path d="M50 8 C72 8 88 30 88 52 C88 76 70 92 50 92 C28 92 12 76 12 52 C12 30 28 8 50 8 Z" fill="#fff" stroke="#17181A" stroke-width="2"/><path d="M32 56 C40 44 48 66 55 50 C62 36 68 60 76 48" stroke="#23594A" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Die-Cut Stickers</h4>
+        <p>Custom shapes for maximum brand impact.</p>
+        <a href="products.html#die-cut-stickers" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#F1E2D2">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#fff" stroke="#17181A" stroke-width="2"/><circle cx="50" cy="50" r="32" fill="#E13B2E"/><text x="50" y="45" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="10" fill="#fff">PROMO</text><text x="50" y="58" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="9" fill="#fff">-20%</text></svg>
+        </div>
+        <h4>Promotional Stickers</h4>
+        <p>Great for events, giveaways and branding.</p>
+        <a href="products.html#custom-promotional" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#EEEAE0">
+          <svg viewBox="0 0 100 100"><rect x="6" y="6" width="88" height="88" fill="#DFD8C8"/><path d="M20 70 C34 40 46 78 58 46 C68 22 78 56 90 40" stroke="#17181A" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Wall Decals</h4>
+        <p>Transform spaces with big, bold ideas.</p>
+        <a href="products.html#wall-decals" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="type-item">
+        <div class="type-figure" style="background:#E4EEE9">
+          <svg viewBox="0 0 100 100"><path d="M50 20 C58 8 78 12 78 32 C78 50 58 62 50 74 C42 62 22 50 22 32 C22 12 42 8 50 20 Z" fill="#fff" stroke="#17181A" stroke-width="2"/></svg>
+        </div>
+        <h4>Custom Shape Labels</h4>
+        <p>Unique die-cut designs for a distinct brand.</p>
+        <a href="products.html#custom-promotional" class="btn-arrow">View products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MADE FOR THE WAY YOU WORK ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <h2>Made for the way your business works</h2>
+      <p class="lede" style="margin-top:12px;">No matter the industry, custom labels and stickers help you look professional and stay organized.</p>
+    </div>
+
+    <div class="business-grid">
+      <div class="biz-card biz-1">
+        <svg class="biz-motif" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+          <rect x="120" y="60" width="120" height="150" rx="8" fill="#232427"/>
+          <rect x="140" y="85" width="80" height="34" rx="4" fill="#E13B2E"/>
+          <rect x="140" y="130" width="60" height="6" fill="#3A3B3E"/>
+          <rect x="140" y="145" width="70" height="6" fill="#3A3B3E"/>
+          <rect x="220" y="150" width="110" height="140" rx="8" fill="#232427"/>
+          <rect x="238" y="172" width="74" height="30" rx="4" fill="#B97A4A"/>
+        </svg>
+        <h3>Product Packaging</h3>
+        <p>Make every bottle, box and pouch memorable with labels built for your brand.</p>
+        <a href="#" class="btn-arrow biz-link">Explore products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="biz-card biz-2">
+        <svg class="biz-motif" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+          <rect x="30" y="150" width="90" height="80" fill="#C24A3E"/>
+          <rect x="130" y="120" width="90" height="110" fill="#C24A3E"/>
+          <rect x="230" y="160" width="90" height="70" fill="#C24A3E"/>
+          <rect x="150" y="140" width="50" height="18" rx="2" fill="#fff"/>
+          <rect x="250" y="180" width="50" height="18" rx="2" fill="#fff"/>
+        </svg>
+        <h3>Retail &amp; Inventory</h3>
+        <p>Keep shelves and stockrooms organized with durable barcode labels.</p>
+        <a href="#" class="btn-arrow biz-link">Explore products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="biz-card biz-3">
+        <svg class="biz-motif" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+          <circle cx="300" cy="80" r="70" fill="#1B4A3E"/>
+          <path d="M270 90 C280 70 292 106 305 82 C316 62 328 96 345 76" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <h3>Marketing &amp; Promotions</h3>
+        <p>Get noticed with eye-catching stickers for launches and giveaways.</p>
+        <a href="#" class="btn-arrow biz-link">Explore products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="biz-card biz-4">
+        <div class="biz-4-copy">
+          <h3>Events &amp; Personal Branding</h3>
+          <p>Perfect for weddings, pop-ups, creators and anyone building something of their own.</p>
+          <a href="#" class="btn-arrow biz-link">Explore products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+        </div>
+        <div class="biz-4-motif">
+          <svg viewBox="0 0 160 160">
+            <rect x="10" y="10" width="140" height="140" rx="70" fill="#F1E2D2"/>
+            <text x="80" y="76" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="20" fill="#17181A">SAVE</text>
+            <text x="80" y="100" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="20" fill="#B97A4A">THE DATE</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CUSTOM PRINTING ===================== -->
+<section class="section" id="materials">
+  <div class="wrap reveal">
+    <div class="why-split">
+      <div class="why-figure">
+        <svg viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="130" fill="#fff" stroke="#17181A" stroke-width="2"/>
+          <circle cx="150" cy="150" r="100" fill="none" stroke="#B97A4A" stroke-width="2" stroke-dasharray="3 6"/>
+          <text x="150" y="130" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="19" fill="#17181A">QUALITY</text>
+          <text x="150" y="155" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="19" fill="#17181A">PRINTS</text>
+          <path d="M110 178 C122 190 138 190 150 178 C162 190 178 190 190 178" stroke="#23594A" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <text x="150" y="212" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="600" font-size="11" letter-spacing="1" fill="#4B4C4E">BRIGHTER IDEAS</text>
+        </svg>
+      </div>
+
+      <div class="why-copy">
+        <span class="kicker">Why custom printing</span>
+        <h2>More than just a sticker.</h2>
+        <p class="lede" style="margin-top:14px;">Choose your size, shape, material and finish. We combine quality printing with precision cutting to deliver stickers that look sharp and hold up.</p>
+        <ul class="why-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Custom sizing &amp; shapes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Professional print quality</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Wide range of materials</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Small and bulk quantities</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Matte, gloss &amp; specialty finishes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Expert artwork support</li>
+        </ul>
+        <a href="#materials" class="btn btn-ghost">Choose Your Material</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p class="lede" style="margin-top:12px;">From your idea to your doorstep — five steps, start to finish.</p>
+    </div>
+
+    <div class="steps-row">
+      <div class="step"><div class="step-num">1</div><h4>Choose Your Sticker</h4><p>Pick a type, size, material and finish.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Upload Your Artwork</h4><p>Send your design, or let our team help.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Confirm Your Order</h4><p>Review and approve your digital proof.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>We Print</h4><p>High-quality printing and precision cutting.</p></div>
+      <div class="step"><div class="step-num">5</div><h4>We Deliver</h4><p>Straight to your door, ready to use.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED PRODUCTS ===================== -->
+<section class="section" id="gallery">
+  <div class="wrap reveal">
+    <div class="section-head split-head">
+      <div><h2>Featured products</h2></div>
+      <a href="products.html" class="btn-arrow">View all products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+    </div>
+
+    <div class="shelf">
+      <div class="shelf-item">
+        <div class="shelf-figure" style="background:#F1E2D2"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="#E13B2E"/><text x="50" y="46" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="9" fill="#fff">YOUR LOGO</text><text x="50" y="60" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="700" font-size="8" fill="#fff">HERE</text></svg></div>
+        <span class="shelf-badge">Best for branding</span>
+        <h4>Round Logo Stickers</h4>
+        <p class="shelf-price">From $0.05 each</p>
+        <a href="products.html#custom-promotional" class="btn-arrow">View product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="shelf-item">
+        <div class="shelf-figure" style="background:#EEEAE0"><svg viewBox="0 0 100 100"><rect x="18" y="30" width="64" height="40" rx="4" fill="#fff" stroke="#17181A" stroke-width="2"/><rect x="26" y="38" width="48" height="4" fill="#DFD8C8"/><rect x="26" y="48" width="30" height="4" fill="#DFD8C8"/></svg></div>
+        <span class="shelf-badge">Best for packaging</span>
+        <h4>Product Labels (Roll)</h4>
+        <p class="shelf-price">From $0.06 each</p>
+        <a href="products.html#product-labels" class="btn-arrow">View product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="shelf-item">
+        <div class="shelf-figure" style="background:#E4EEE9"><svg viewBox="0 0 100 100"><path d="M50 12 C68 12 82 30 82 50 C82 72 66 86 50 86 C32 86 18 72 18 50 C18 30 32 12 50 12 Z" fill="#fff" stroke="#17181A" stroke-width="2"/><path d="M34 55 C42 44 50 62 58 48 C64 38 70 54 76 46" stroke="#23594A" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></div>
+        <span class="shelf-badge">Best for promos</span>
+        <h4>Die-Cut Stickers</h4>
+        <p class="shelf-price">From $0.10 each</p>
+        <a href="products.html#die-cut-stickers" class="btn-arrow">View product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+
+      <div class="shelf-item">
+        <div class="shelf-figure" style="background:#F1E2D2"><svg viewBox="0 0 100 100"><rect x="20" y="22" width="60" height="56" rx="4" fill="#fff" stroke="#17181A" stroke-width="1.5" opacity="0.9"/><rect x="30" y="34" width="40" height="4" fill="#B97A4A" opacity="0.6"/><rect x="30" y="44" width="26" height="4" fill="#B97A4A" opacity="0.6"/></svg></div>
+        <span class="shelf-badge">Best for premium look</span>
+        <h4>Transparent Labels</h4>
+        <p class="shelf-price">From $0.09 each</p>
+        <a href="products.html#product-labels" class="btn-arrow">View product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUALITY / TRUST ===================== -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="quality-block">
+      <div class="quality-figure">
+        <svg viewBox="0 0 320 300">
+          <rect x="20" y="20" width="280" height="200" rx="10" fill="#232427" stroke="#3A3B3E" stroke-width="2"/>
+          <rect x="46" y="46" width="70" height="70" rx="6" fill="#E13B2E"/>
+          <rect x="126" y="46" width="70" height="70" rx="6" fill="#B97A4A"/>
+          <rect x="206" y="46" width="70" height="70" rx="6" fill="#23594A"/>
+          <rect x="46" y="126" width="70" height="70" rx="6" fill="#F6F3EC"/>
+          <rect x="126" y="126" width="70" height="70" rx="6" fill="#E13B2E" opacity="0.6"/>
+          <rect x="206" y="126" width="70" height="70" rx="6" fill="#B97A4A" opacity="0.6"/>
+          <rect x="0" y="230" width="320" height="14" fill="#4B4C4E"/>
+          <rect x="0" y="250" width="320" height="6" fill="#3A3B3E"/>
+        </svg>
+      </div>
+      <div class="quality-copy">
+        <span class="kicker">Why customers trust us</span>
+        <h2>Printed for the details.</h2>
+        <p class="lede">We run advanced printing technology and premium materials, so every colour, edge and cut holds up to close inspection.</p>
+        <ul class="quality-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Sharp, accurate colors</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Clean, precise cutting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Durable, weatherproof materials</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12 L9 17 L20 6"/></svg>Every order quality-inspected</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section" id="quote">
+  <div class="wrap reveal">
+    <div class="final-cta">
+      <svg class="final-cta-motif" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#fff"/></svg>
+      <div>
+        <h2>Have a sticker in mind?</h2>
+        <p>Tell us what you need and we'll help turn your artwork into finished stickers.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================ FOOTER =============================== -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 3 L34 10 V26 L20 37 L6 26 V10 Z" fill="#FFFFFF"/>
+            <path d="M20 3 L34 10 L20 17 L6 10 Z" fill="#E13B2E"/>
+          </svg>
+          <span>StickPro</span>
+        </a>
+        <p>High-quality custom stickers and labels for businesses, creators and everyone in between.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 20 L13 8 M11 14 C13.5 14 15 12.3 15 10 C15 8 13.3 7 11.5 7 C9 7 7.5 9 7.5 11"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3 C15 6 17 8 20 8 M15 3 V15 A4 4 0 1 1 11 11"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html#product-labels">Product Labels</a></li>
+          <li><a href="products.html#barcode-stickers">Barcode Stickers</a></li>
+          <li><a href="products.html#die-cut-stickers">Die-Cut Stickers</a></li>
+          <li><a href="products.html#wall-decals">Wall Decals</a></li>
+          <li><a href="products.html#custom-promotional">Custom Shape Labels</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Materials &amp; Finishes</a></li>
+          <li><a href="#">Artwork Guide</a></li>
+          <li><a href="#">Bulk Pricing</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Keep in touch</h4>
+        <p style="color:rgba(255,255,255,.6); font-size:14.5px; margin:0;">Get print tips and new product drops in your inbox.</p>
+        <form onsubmit="return false;">
+          <label for="footerEmail" class="visually-hidden" style="position:absolute; left:-9999px;">Email address</label>
+          <input id="footerEmail" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12 H19 M13 6 L19 12 L13 18"/></svg></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 StickPro. All rights reserved.</span>
+      <div class="legal-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
