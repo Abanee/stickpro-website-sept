@@ -782,8 +782,11 @@
       ? "rgba(210,225,218,0.5)"
       : bg;
 
+    var sizeScales = { small: "scale(0.85)", medium: "scale(1)", large: "scale(1.15)" };
+
     if (previewSvg) {
       previewSvg.innerHTML = shapeInner;
+      previewSvg.style.transform = sizeScales[s.size] || "scale(1)";
     }
     var stage = document.getElementById("studioPreviewStage");
     if (stage) stage.style.background = stageBg;
