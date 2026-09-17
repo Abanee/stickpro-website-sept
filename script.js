@@ -53,6 +53,9 @@
       localStorage.setItem("stickpro-direction", dir);
     } catch (e) {}
     updateDirectionButtons(dir);
+    if (window.scrollTo) {
+      window.scrollTo(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+    }
   }
 
   function toggleDirection() {
@@ -315,12 +318,12 @@
     if (tag && d) tag.textContent = d.visualTag;
 
     var images = {
-      paper: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=800&q=80",
-      vinyl: "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=800&q=80",
-      clear: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      matte: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=800&q=80",
-      gloss: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
-      weather: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80"
+      paper: "Assets/Materials/mat_paper.jpg",
+      vinyl: "Assets/Materials/mat_vinyl.jpg",
+      clear: "Assets/Materials/mat_clear.jpg",
+      matte: "Assets/Materials/mat_matte.jpg",
+      gloss: "Assets/Materials/mat_gloss.jpg",
+      weather: "Assets/Materials/mat_weather.jpg"
     };
 
     if (img) {
