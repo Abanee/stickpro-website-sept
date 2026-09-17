@@ -150,9 +150,16 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.02, rootMargin: "0px 0px 80px 0px" }
     );
     revealTargets.forEach(function (el) { observer.observe(el); });
+
+    // Safety fallback: ensure all content becomes visible after initial load
+    setTimeout(function () {
+      revealTargets.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }, 800);
   } else {
     revealTargets.forEach(function (el) { el.classList.add("is-visible"); });
   }
@@ -876,17 +883,268 @@
       e.preventDefault();
     });
 
-    document.addEventListener("mousemove", function(e) {
-      if (!isDragging) return;
-      var x = e.pageX - creatorStrip.offsetLeft;
-      var delta = x - dragStartX;
-      creatorStrip.scrollLeft = scrollStartLeft - delta;
-    });
-
     document.addEventListener("mouseup", function() {
       isDragging = false;
       if (creatorStrip) creatorStrip.style.cursor = "grab";
     });
+  }
+
+  // ─── PREMIUM HERO CARD-STACK CAROUSEL ────────────────────────────────────────
+  function initHeroCardStack() {
+    var container = document.getElementById("heroStackContainer");
+    var stack = document.getElementById("heroCardStack");
+    if (!container || !stack) return;
+
+    var cards = Array.from(stack.querySelectorAll(".hero-stack-card"));
+    var cardCount = cards.length;
+    if (cardCount === 0) return;
+
+    var activeIndex = 0;
+    var isAnimating = false;
+    var autoplayTimer = null;
+    var AUTOPLAY_INTERVAL = 4000;
+    var TRANSITION_DURATION = 750;
+
+    var posClasses = ["pos-0", "pos-1", "pos-2", "pos-3", "pos-exit-left", "pos-exit-right", "is-dragging"];
+
+    function isRTL() {
+      return document.documentElement.getAttribute("dir") === "rtl";
+    }
+
+    function removePositionClasses(el) {
+      posClasses.forEach(function (cls) {
+        el.classList.remove(cls);
+      });
+    }
+
+    function renderStack(targetIndex, direction, exitingCard) {
+      cards.forEach(function (card, i) {
+        if (card === exitingCard) return;
+        removePositionClasses(card);
+        var relPos = (i - targetIndex + cardCount) % cardCount;
+        if (relPos < 4) {
+          card.classList.add("pos-" + relPos);
+        } else {
+          card.classList.add("pos-3");
+        }
+      });
+    }
+
+    function nextSlide() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      var currentCard = cards[activeIndex];
+      var nextIndex = (activeIndex + 1) % cardCount;
+      var exitClass = isRTL() ? "pos-exit-right" : "pos-exit-left";
+
+      // 1. Exit front active card
+      removePositionClasses(currentCard);
+      currentCard.classList.add(exitClass);
+
+      // 2. Advance other cards
+      renderStack(nextIndex, "next", currentCard);
+      activeIndex = nextIndex;
+
+      // 3. Move exiting card to back of stack
+      setTimeout(function () {
+        removePositionClasses(currentCard);
+        currentCard.classList.add("pos-3");
+      }, 520);
+
+      // 4. Release lock after transition duration
+      setTimeout(function () {
+        isAnimating = false;
+      }, TRANSITION_DURATION);
+    }
+
+    function prevSlide() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      var prevIndex = (activeIndex - 1 + cardCount) % cardCount;
+      var incomingCard = cards[prevIndex];
+      var enterClass = isRTL() ? "pos-exit-left" : "pos-exit-right";
+
+      removePositionClasses(incomingCard);
+      incomingCard.classList.add(enterClass);
+      void incomingCard.offsetWidth;
+
+      activeIndex = prevIndex;
+      cards.forEach(function (card, i) {
+        removePositionClasses(card);
+        var relPos = (i - activeIndex + cardCount) % cardCount;
+        if (relPos < 4) {
+          card.classList.add("pos-" + relPos);
+        } else {
+          card.classList.add("pos-3");
+        }
+      });
+
+      setTimeout(function () {
+        isAnimating = false;
+      }, TRANSITION_DURATION);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(function () {
+        nextSlide();
+      }, AUTOPLAY_INTERVAL);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    // Direct card click interaction: quick tap/click on stack advances card
+    var hasDragged = false;
+    stack.addEventListener("click", function () {
+      if (hasDragged) return;
+      resetAutoplay();
+      nextSlide();
+    });
+
+    // Hover pause / resume
+    container.addEventListener("mouseenter", stopAutoplay);
+    container.addEventListener("mouseleave", startAutoplay);
+
+    // Keyboard accessibility
+    container.setAttribute("tabindex", "0");
+    container.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === " ") {
+        e.preventDefault();
+        resetAutoplay();
+        isRTL() ? prevSlide() : nextSlide();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        resetAutoplay();
+        isRTL() ? nextSlide() : prevSlide();
+      }
+    });
+
+    // ─── DRAG & TOUCH SWIPE CONTROLLER ───────────────────────────────────────
+    var dragStartX = 0;
+    var dragStartY = 0;
+    var dragDeltaX = 0;
+    var dragDeltaY = 0;
+    var isDragging = false;
+    var activeCardEl = null;
+    var SWIPE_THRESHOLD = 38;
+
+    function onDragStart(clientX, clientY, target) {
+      if (isAnimating) return;
+      activeCardEl = cards[activeIndex];
+      if (!activeCardEl || !activeCardEl.contains(target)) return;
+
+      isDragging = true;
+      hasDragged = false;
+      dragStartX = clientX;
+      dragStartY = clientY;
+      dragDeltaX = 0;
+      dragDeltaY = 0;
+      stopAutoplay();
+      activeCardEl.classList.add("is-dragging");
+    }
+
+    function onDragMove(clientX, clientY) {
+      if (!isDragging || !activeCardEl) return;
+      dragDeltaX = clientX - dragStartX;
+      dragDeltaY = clientY - dragStartY;
+
+      if (Math.abs(dragDeltaX) > 6 || Math.abs(dragDeltaY) > 6) {
+        hasDragged = true;
+      }
+
+      // Responsive physics follow
+      var rot = dragDeltaX * 0.04;
+      activeCardEl.style.transform = "translate3d(" + dragDeltaX + "px, " + (dragDeltaY * 0.15) + "px, 20px) rotate(" + rot + "deg)";
+    }
+
+    function onDragEnd() {
+      if (!isDragging || !activeCardEl) return;
+      isDragging = false;
+      activeCardEl.classList.remove("is-dragging");
+      activeCardEl.style.transform = "";
+
+      var rtl = isRTL();
+      var passedThreshold = Math.abs(dragDeltaX) > SWIPE_THRESHOLD;
+
+      if (passedThreshold) {
+        if (dragDeltaX < 0) {
+          rtl ? prevSlide() : nextSlide();
+        } else {
+          rtl ? nextSlide() : prevSlide();
+        }
+      }
+
+      activeCardEl = null;
+      resetAutoplay();
+      setTimeout(function () {
+        hasDragged = false;
+      }, 60);
+    }
+
+    // Pointer / Mouse events
+    stack.addEventListener("mousedown", function (e) {
+      if (e.button !== 0) return;
+      onDragStart(e.clientX, e.clientY, e.target);
+    });
+
+    window.addEventListener("mousemove", function (e) {
+      if (isDragging) {
+        onDragMove(e.clientX, e.clientY);
+      }
+    });
+
+    window.addEventListener("mouseup", function () {
+      if (isDragging) {
+        onDragEnd();
+      }
+    });
+
+    // Touch events
+    stack.addEventListener("touchstart", function (e) {
+      if (e.touches.length === 1) {
+        onDragStart(e.touches[0].clientX, e.touches[0].clientY, e.target);
+      }
+    }, { passive: true });
+
+    window.addEventListener("touchmove", function (e) {
+      if (isDragging && e.touches.length === 1) {
+        onDragMove(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    window.addEventListener("touchend", function () {
+      if (isDragging) {
+        onDragEnd();
+      }
+    });
+
+    window.addEventListener("touchcancel", function () {
+      if (isDragging) {
+        onDragEnd();
+      }
+    });
+
+    // Start autoplay
+    startAutoplay();
+  }
+
+  // Initialize Hero Card Stack
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHeroCardStack);
+  } else {
+    initHeroCardStack();
   }
 
 })();
