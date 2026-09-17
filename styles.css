@@ -354,7 +354,7 @@ html[data-theme="dark"] .hero-stage {
   color: var(--text-primary);
   flex-shrink: 0;
 }
-.logo-mark{ width:34px; height:34px; flex-shrink:0; }
+.logo-mark{ width:34px; height:34px; flex-shrink:0; object-fit:contain; display:block; }
 .logo-sub{ display:block; font-size:10px; font-weight:600; color: var(--text-secondary); letter-spacing:.03em; }
 
 .main-nav{ display:flex; align-items:center; gap: 24px; }
@@ -4257,6 +4257,8 @@ html[data-theme="dark"] .h2-desk-canvas svg g[stroke="rgba(180,160,120,0.14)"] {
   width: 38px;
   height: 38px;
   flex-shrink: 0;
+  object-fit: contain;
+  display: block;
 }
 .auth-brand-text {
   display: flex;
