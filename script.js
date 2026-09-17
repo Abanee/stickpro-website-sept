@@ -195,6 +195,13 @@
       { rootMargin: "-140px 0px -60% 0px", threshold: 0 }
     );
     productSections.forEach(function (sec) { spy.observe(sec); });
+
+    productNavItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        productNavItems.forEach(function (i) { i.classList.remove("active"); });
+        item.classList.add("active");
+      });
+    });
   }
 
   // ─── MATERIALS PAGE — SHELF SELECTOR ────────────────────────────────────────

@@ -1616,10 +1616,12 @@ body.nav-open .mobile-nav{ display:flex; }
 /* --- Product navigation rail: sticky, compact, scrollable pills --- */
 .product-nav-rail{
   position: sticky; top: 73px; z-index: 60;
-  background: rgba(246,243,236,.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-  margin-top: 40px;
+  background: var(--bg-page);
+  background: color-mix(in srgb, var(--bg-page) 92%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  margin-top: 0;
 }
 .product-nav-track{
   display:flex; gap:8px; overflow-x:auto;
@@ -1630,21 +1632,21 @@ body.nav-open .mobile-nav{ display:flex; }
 .product-nav-track::-webkit-scrollbar{ display:none; }
 .product-nav-item{
   flex:0 0 auto; display:flex; align-items:center; gap:8px;
-  padding: 9px 16px; border-radius:999px; border:1px solid var(--line);
-  background: var(--white); font-weight:700; font-size:13.5px; color: var(--ink-soft);
+  padding: 9px 16px; border-radius:999px; border:1px solid var(--border);
+  background: var(--bg-surface); font-weight:700; font-size:13.5px; color: var(--text-secondary);
   white-space:nowrap; transition: all .18s ease;
 }
 .product-nav-item svg{ width:15px; height:15px; flex-shrink:0; }
-.product-nav-item:hover{ border-color: var(--ink); color: var(--ink); }
-.product-nav-item.active{ background: var(--ink); border-color: var(--ink); color: var(--white); }
+.product-nav-item:hover{ border-color: var(--text-primary); color: var(--text-primary); }
+.product-nav-item.active{ background: var(--text-primary); border-color: var(--text-primary); color: var(--text-inverse); }
 
-/* --- Product catalog rows (five distinct compositions) --- */
-.product-row{ padding: 96px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 130px; }
+/* --- Product catalog rows (alternating two-column cadence) --- */
+.product-row{ padding: 96px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 155px; }
 .product-row:last-of-type{ border-bottom:none; }
 .product-row-inner{ display:grid; gap: 56px; align-items:center; }
 
 .product-index{
-  display:block; font-size:13px; font-weight:800; color: var(--cherry);
+  display:block; font-size:13px; font-weight:800; color: var(--accent);
   letter-spacing:.04em; margin-bottom:10px;
 }
 .product-copy h2{ margin-bottom:14px; }
@@ -1652,59 +1654,46 @@ body.nav-open .mobile-nav{ display:flex; }
 
 .product-figure{
   border-radius: var(--radius-l); overflow:hidden; position:relative;
-  border:1px solid var(--line);
+  border:1px solid var(--border);
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.product-figure:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 .product-figure svg{ width:100%; height:100%; display:block; }
 
 .product-specs{ margin: 28px 0 30px; display:grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
 .product-spec-item dt{
   font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
-  color: var(--ink-soft); margin-bottom:6px;
+  color: var(--text-muted); margin-bottom:6px;
 }
-.product-spec-item dd{ margin:0; font-size:15px; font-weight:600; line-height:1.45; }
+.product-spec-item dd{ margin:0; font-size:15px; font-weight:600; line-height:1.45; color: var(--text-primary); }
 
 /* Composition 1 — standard: image left, copy right */
 .product-row--standard .product-row-inner{ grid-template-columns: 1fr 1fr; }
-.product-row--standard .product-figure{ aspect-ratio: 4/5; background: var(--paper-dim); }
+.product-row--standard .product-figure{ background: var(--bg-surface-2); }
 
 /* Composition 2 — reversed: copy left, image right */
 .product-row--reverse .product-row-inner{ grid-template-columns: 1fr 1fr; }
-.product-row--reverse .product-figure{ order:2; aspect-ratio:4/5; background: var(--kraft-tint); }
+.product-row--reverse .product-figure{ order:2; background: var(--bg-surface-2); }
 .product-row--reverse .product-copy{ order:1; }
 
-/* Composition 3 — wide environmental image, copy centered below */
-.product-row--wide .product-figure{ aspect-ratio: 16/8; background: var(--pine-tint); margin-bottom: 48px; }
-.product-row--wide .product-copy{ text-align:left; }
-
-/* Composition 4 — close-up image, floating spec card overlapping the edge */
-.product-row--closeup .product-row-inner{ display:block; }
-.product-row--closeup .product-figure{ aspect-ratio: 1/1; max-width:640px; margin:0 auto; background: var(--ink); }
-.product-row--closeup .product-copy{
-  background: var(--white); border:1px solid var(--line); border-radius: var(--radius-l);
-  padding: 34px 38px; max-width: 480px; margin: -70px auto 0; position:relative;
-  box-shadow: 0 24px 48px rgba(23,24,26,.12);
+.product-tags{ display:flex; flex-wrap:wrap; gap:8px; margin: 22px 0 24px; }
+.product-tags .tag{
+  padding:7px 14px; border-radius:999px; border:1px solid var(--border);
+  font-size:13px; font-weight:700; background: var(--bg-surface); color: var(--text-secondary);
 }
-.product-row--closeup .product-specs{ grid-template-columns: 1fr; }
-
-/* Composition 5 — editorial asymmetric split with tag pills instead of a spec grid */
-.product-row--editorial .product-row-inner{ grid-template-columns: .8fr 1.2fr; align-items:start; }
-.product-row--editorial .product-figure{ aspect-ratio:3/4; background: var(--paper-dim); }
-.product-row--editorial .product-tags{ display:flex; flex-wrap:wrap; gap:8px; margin: 22px 0 20px; }
-.product-row--editorial .tag{
-  padding:7px 14px; border-radius:999px; border:1px solid var(--line);
-  font-size:13px; font-weight:700;
-}
-.product-row--editorial > .wrap > .product-row-inner > .product-copy > p:last-of-type{ margin-bottom: 24px; }
 
 @media (max-width: 1024px){
-  .product-row{ padding: 64px 0; }
-  .product-row-inner{ gap: 32px; }
+  .product-row{ padding: 64px 0; scroll-margin-top: 140px; }
+  .product-row-inner{ gap: 36px; }
   .product-row--standard .product-row-inner,
-  .product-row--reverse .product-row-inner,
-  .product-row--editorial .product-row-inner{ grid-template-columns:1fr; }
-  .product-row--reverse .product-figure,
+  .product-row--reverse .product-row-inner{ grid-template-columns:1fr; }
+  .product-row--reverse .product-figure{ order:0; }
   .product-row--reverse .product-copy{ order:0; }
-  .product-row--closeup .product-copy{ margin-top:-48px; padding:26px; max-width:none; }
 }
 @media (max-width: 560px){
   .product-specs{ grid-template-columns: 1fr; }
