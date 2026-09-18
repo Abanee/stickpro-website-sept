@@ -1116,4 +1116,242 @@
     initHeroCardStack();
   }
 
+  // ─── SPECIAL DISCOUNTS & OFFERS SECTION CONTROLLER ────────────────────────
+  function initOffersSection() {
+    var offersSec = document.getElementById("offers");
+    if (!offersSec) return;
+
+    // 1. Coupon code copy interaction with professional feedback
+    var couponButtons = offersSec.querySelectorAll(".coupon-pill-btn");
+    couponButtons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var code = btn.getAttribute("data-coupon");
+        if (!code) return;
+
+        function showCopiedState() {
+          btn.classList.add("copied");
+          var notice = btn.querySelector(".coupon-copied-notice");
+          if (notice) {
+            notice.textContent = "Copied!";
+          }
+          setTimeout(function () {
+            btn.classList.remove("copied");
+          }, 2200);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(showCopiedState).catch(function () {
+            fallbackCopy(code);
+            showCopiedState();
+          });
+        } else {
+          fallbackCopy(code);
+          showCopiedState();
+        }
+      });
+    });
+
+    function fallbackCopy(text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.top = "-9999px";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand("copy");
+      } catch (err) {}
+      document.body.removeChild(textArea);
+    }
+
+    // 2. Interactive Volume Tier Calculator
+    var calcBox = document.getElementById("volume-calculator");
+    if (!calcBox) return;
+
+    var tierData = {
+      100: {
+        unitPrice: "$0.48",
+        originalUnit: "$0.48",
+        totalPrice: "$48",
+        totalSavings: "$0 Saved",
+        savingsDetail: "Base single-run tier",
+        savingsPct: "Base Tier",
+        shippingText: "Standard Courier Delivery"
+      },
+      250: {
+        unitPrice: "$0.32",
+        originalUnit: "$0.48",
+        totalPrice: "$80",
+        totalSavings: "$40 Saved",
+        savingsDetail: "33% discount off single-run rate",
+        savingsPct: "Save 33%",
+        shippingText: "Standard Tracked Delivery"
+      },
+      500: {
+        unitPrice: "$0.20",
+        originalUnit: "$0.48",
+        totalPrice: "$100",
+        totalSavings: "$140 Saved",
+        savingsDetail: "58% discount off single-run rate",
+        savingsPct: "Save 58%",
+        shippingText: "Free Tracked Express Courier"
+      },
+      1000: {
+        unitPrice: "$0.12",
+        originalUnit: "$0.48",
+        totalPrice: "$120",
+        totalSavings: "$360 Saved",
+        savingsDetail: "75% discount off 100-pc rate",
+        savingsPct: "Save 75%",
+        shippingText: "Free Tracked Express Courier"
+      },
+      2500: {
+        unitPrice: "$0.09",
+        originalUnit: "$0.48",
+        totalPrice: "$225",
+        totalSavings: "$975 Saved",
+        savingsDetail: "81% discount off 100-pc rate",
+        savingsPct: "Save 81%",
+        shippingText: "Free Priority Express Courier"
+      },
+      5000: {
+        unitPrice: "$0.06",
+        originalUnit: "$0.48",
+        totalPrice: "$300",
+        totalSavings: "$2,100 Saved",
+        savingsDetail: "87% bulk rate off single-run rate",
+        savingsPct: "Save 87%",
+        shippingText: "Free Priority Freight Pallet"
+      }
+    };
+
+    var pills = calcBox.querySelectorAll(".calc-pill");
+    var unitPriceEl = document.getElementById("calcUnitPrice");
+    var originalUnitEl = document.getElementById("calcOriginalUnit");
+    var totalPriceEl = document.getElementById("calcTotalPrice");
+    var totalSavingsEl = document.getElementById("calcTotalSavings");
+    var savingsDetailEl = document.getElementById("calcSavingsDetail");
+    var savingsPctEl = document.getElementById("calcSavingsPct");
+    var shippingPerkEl = document.getElementById("calcShippingPerk");
+    var applyBtnEl = document.getElementById("calcApplyBtn");
+
+    pills.forEach(function (pill) {
+      pill.addEventListener("click", function () {
+        var qty = pill.getAttribute("data-qty");
+        var data = tierData[qty];
+        if (!data) return;
+
+        pills.forEach(function (p) {
+          p.classList.remove("active");
+          p.setAttribute("aria-checked", "false");
+        });
+        pill.classList.add("active");
+        pill.setAttribute("aria-checked", "true");
+
+        if (unitPriceEl) unitPriceEl.textContent = data.unitPrice;
+        if (originalUnitEl) originalUnitEl.textContent = data.originalUnit;
+        if (totalPriceEl) totalPriceEl.textContent = data.totalPrice;
+        if (totalSavingsEl) totalSavingsEl.textContent = data.totalSavings;
+        if (savingsDetailEl) savingsDetailEl.textContent = data.savingsDetail;
+        if (savingsPctEl) savingsPctEl.textContent = data.savingsPct;
+
+        if (shippingPerkEl) {
+          var span = shippingPerkEl.querySelector("span");
+          if (span) span.textContent = data.shippingText;
+        }
+
+        if (applyBtnEl) {
+          var formattedQty = Number(qty).toLocaleString();
+          var btnText = applyBtnEl.querySelector("span");
+          if (btnText) {
+            btnText.textContent = "Apply " + formattedQty + " Pcs Tier to Quote";
+          }
+        }
+      });
+    });
+  }
+
+  // Initialize Offers Section
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initOffersSection);
+  } else {
+    initOffersSection();
+  }
+
+  // ─── SPECIAL OFFER CAMPAIGN CONFIG & COUNTDOWN (HOME 2) ───────────────────
+  var specialOffer = {
+    discount: "30%",
+    // Configurable campaign target: 3 days, 14 hours, 27 minutes, 59 seconds from now
+    endDate: new Date(Date.now() + (3 * 86400 + 14 * 3600 + 27 * 60 + 59) * 1000).toISOString(),
+    freeShippingThreshold: "₹999"
+  };
+
+  function initSpecialOfferCountdown() {
+    var offerSection = document.getElementById("special-offer");
+    if (!offerSection) return;
+
+    // Apply configured values to UI elements
+    var discountEl = document.getElementById("specialOfferDiscount");
+    if (discountEl && specialOffer.discount) {
+      discountEl.textContent = specialOffer.discount;
+    }
+    var thresholdEl = document.getElementById("specialOfferThreshold");
+    if (thresholdEl && specialOffer.freeShippingThreshold) {
+      thresholdEl.textContent = "on orders above " + specialOffer.freeShippingThreshold;
+    }
+
+    var daysEl = document.getElementById("cdDays");
+    var hoursEl = document.getElementById("cdHours");
+    var minutesEl = document.getElementById("cdMinutes");
+    var secondsEl = document.getElementById("cdSeconds");
+
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+    var targetTime = new Date(specialOffer.endDate).getTime();
+    if (isNaN(targetTime)) {
+      targetTime = Date.now() + (3 * 86400 + 14 * 3600 + 27 * 60 + 59) * 1000;
+    }
+
+    function padZero(num) {
+      return num < 10 ? "0" + num : "" + num;
+    }
+
+    function updateTimer() {
+      var now = Date.now();
+      var remaining = Math.max(0, targetTime - now);
+
+      var days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+      daysEl.textContent = padZero(days);
+      hoursEl.textContent = padZero(hours);
+      minutesEl.textContent = padZero(minutes);
+      secondsEl.textContent = padZero(seconds);
+
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+      }
+    }
+
+    updateTimer();
+    var timerInterval = setInterval(updateTimer, 1000);
+
+    window.addEventListener("beforeunload", function () {
+      clearInterval(timerInterval);
+    });
+  }
+
+  // Initialize Home 2 Special Offer
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSpecialOfferCountdown);
+  } else {
+    initSpecialOfferCountdown();
+  }
+
 })();
+
