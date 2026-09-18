@@ -3061,6 +3061,30 @@ html[data-theme="dark"] .mg-panel--gloss .mg-use-case{
 .decision-help{ margin-top:24px; padding-top:20px; border-top:1px solid var(--line); font-size:14px; color: var(--ink-soft); }
 .decision-help strong{ color: var(--ink); }
 .decision-help a{ color: var(--cherry); font-weight:700; }
+html[data-theme="dark"] .decision-q-label,
+html[data-theme="dark"] .decision-result-label,
+html[data-theme="dark"] .decision-result-desc,
+html[data-theme="dark"] .decision-help{ color: var(--text-secondary); }
+html[data-theme="dark"] .decision-q-label::before{
+  background: var(--accent);
+  color: #FFFFFF;
+}
+html[data-theme="dark"] .decision-opt{
+  background: var(--bg-elevated);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+html[data-theme="dark"] .decision-opt:hover{
+  background: var(--bg-subtle);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+html[data-theme="dark"] .decision-opt.selected{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+}
+html[data-theme="dark"] .decision-help strong{ color: var(--text-primary); }
 
 @media (max-width: 1024px){ .decision-tool{ grid-template-columns:1fr; padding:32px; gap:32px; } }
 @media (max-width: 560px){ .decision-tool{ padding:24px; } }
