@@ -1770,7 +1770,7 @@ html[data-theme="dark"] .quality-block{
 /* --- Narrow editorial hero (not a product hero) --- */
 .about-hero{
   padding: 104px 0 92px;
-  background: linear-gradient(180deg, rgba(14, 16, 18, 0.72) 0%, rgba(14, 16, 18, 0.88) 100%), url('https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.72) 0%, rgba(14, 16, 18, 0.88) 100%), url('Assets/Banner/About.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -2502,7 +2502,7 @@ html[data-theme="dark"] .quality-block{
 /* --- Hero: editorial statement, no illustration stage --- */
 .products-hero{
   padding: 96px 0 64px;
-  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.88) 100%), url('https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.88) 100%), url('Assets/Banner/product.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -2682,7 +2682,7 @@ html[data-theme="dark"] .quality-block{
 /* --- Materials hero: editorial layout --- */
 .materials-hero{
   padding: 104px 0 88px;
-  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.9) 100%), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.9) 100%), url('Assets/Banner/materials.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -3221,7 +3221,7 @@ html[data-theme="dark"] .quality-block{
 /* --- Gallery hero --- */
 .gallery-hero{
   padding: 96px 0 48px;
-  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.9) 100%), url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.9) 100%), url('Assets/Banner/gallery.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -3419,7 +3419,7 @@ html[data-theme="dark"] .quality-block{
 /* --- Contact hero --- */
 .contact-hero{
   padding: 96px 0 68px;
-  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.88) 100%), url('https://images.unsplash.com/photo-1589384267710-7a25be158656?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.74) 0%, rgba(14, 16, 18, 0.88) 100%), url('Assets/Banner/contact.jpg') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -4105,6 +4105,89 @@ html[data-theme="dark"] .h2-seq-cap-final .h2-seq-label{
   transition:all .35s ease;
   max-width:100%;
   max-height:100%;
+}
+
+/* Sticker Mockup Wrapper */
+.h2-sticker-mockup-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.h2-preview-sticker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Shapes */
+.h2-sticker-mockup-wrapper.shape-round {
+  border-radius: 50%;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.22));
+}
+.h2-sticker-mockup-wrapper.shape-round .h2-preview-sticker-img {
+  border-radius: 50%;
+  clip-path: circle(49% at 50% 50%);
+}
+
+.h2-sticker-mockup-wrapper.shape-square {
+  border-radius: 24px;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.22));
+}
+.h2-sticker-mockup-wrapper.shape-square .h2-preview-sticker-img {
+  border-radius: 20px;
+  clip-path: inset(0 round 20px);
+}
+
+.h2-sticker-mockup-wrapper.shape-diecut {
+  border-radius: 36px;
+  filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.24));
+}
+.h2-sticker-mockup-wrapper.shape-diecut .h2-preview-sticker-img {
+  clip-path: polygon(50% 1%, 82% 9%, 99% 34%, 97% 70%, 78% 95%, 50% 99%, 22% 95%, 3% 70%, 1% 34%, 18% 9%);
+}
+
+/* Materials */
+.h2-sticker-mockup-wrapper.mat-vinyl {
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.22));
+}
+
+.h2-sticker-mockup-wrapper.mat-paper {
+  filter: drop-shadow(0 14px 28px rgba(60, 45, 30, 0.24)) sepia(0.14) contrast(1.04);
+}
+
+.h2-sticker-mockup-wrapper.mat-clear {
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.16));
+}
+.h2-sticker-mockup-wrapper.mat-clear .h2-preview-sticker-img {
+  opacity: 0.86;
+  mix-blend-mode: multiply;
+}
+
+/* Gloss Specular Sheen */
+.h2-sticker-gloss-sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.15) 38%, transparent 42%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.h2-sticker-mockup-wrapper.fin-gloss .h2-sticker-gloss-sheen {
+  opacity: 1;
+}
+
+.h2-sticker-mockup-wrapper.fin-matte .h2-sticker-gloss-sheen {
+  opacity: 0;
 }
 .h2-preview-label{
   font-size:12px;
@@ -5216,7 +5299,7 @@ html[data-theme="dark"] .auth-alert-success {
    HOME 2 — CENTERED FIXED HERO & 4x2 INSPIRATION GRID ENHANCEMENTS
    ========================================================================== */
 
-/* Centered Fixed Background Hero for Home 2 */
+/* Centered Fixed Background Hero for Home 2 with Video Support */
 .h2-hero-fixed {
   position: relative;
   min-height: 82vh;
@@ -5224,16 +5307,32 @@ html[data-theme="dark"] .auth-alert-success {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image:
-    linear-gradient(rgba(17, 20, 24, 0.72), rgba(17, 20, 24, 0.88)),
-    url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #0E1012;
   padding: 110px 24px;
   overflow: hidden;
   border-bottom: 1.5px solid var(--border);
+}
+
+.h2-hero-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.h2-hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 16, 18, 0.70) 0%, rgba(14, 16, 18, 0.88) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .h2-hero-centered {
@@ -5244,7 +5343,7 @@ html[data-theme="dark"] .auth-alert-success {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .h2-hero-centered .h2-kicker {

@@ -707,6 +707,9 @@
 
   // ─── HOME 2 — CUSTOMISATION STUDIO ──────────────────────────────────────────
   var studioCtrlBtns = document.querySelectorAll(".h2-ctrl-btn");
+  var studioWrapper = document.getElementById("studioStickerWrapper");
+  var studioGloss = document.getElementById("studioGlossSheen");
+  var studioStage = document.getElementById("studioPreviewStage");
   var previewSvg = document.getElementById("studioPreviewSvg");
 
   // Current state
@@ -730,76 +733,39 @@
   // Background colours per material
   var matBg = {
     vinyl: "#F6F3EC",
-    paper: "#F1E2D2",
-    clear: "rgba(210,220,215,0.35)"
+    paper: "#EDE5D8",
+    clear: "radial-gradient(circle at center, rgba(210,225,218,0.55) 0%, rgba(195,212,206,0.3) 100%)"
   };
 
-  // Fill colours per material
-  var matFill = {
-    vinyl: "#E13B2E",
-    paper: "#B97A4A",
-    clear: "rgba(35,89,74,0.85)"
-  };
+  var sizeScales = { small: "scale(0.82)", medium: "scale(1)", large: "scale(1.18)" };
 
-  function buildPreviewSvg() {
+  function updateStudioPreview() {
     var s = studioState;
-    var bg = matBg[s.material] || "#F6F3EC";
-    var fill = matFill[s.material] || "#E13B2E";
-    var textFill = s.material === "clear" ? "rgba(255,255,255,0.9)" : "white";
 
-    // Gloss highlight gradient
-    var glossDefs = s.finish === "gloss"
-      ? '<defs><linearGradient id="pvGloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.55)"/><stop offset="60%" stop-color="rgba(255,255,255,0)"/></linearGradient></defs>'
-      : "";
-    var glossLayer = s.finish === "gloss" ? '<circle cx="140" cy="140" r="104" fill="url(#pvGloss)"/>' : "";
+    if (studioWrapper) {
+      // Clean previous state classes
+      studioWrapper.className = "h2-sticker-mockup-wrapper " +
+        "shape-" + s.shape + " " +
+        "mat-" + s.material + " " +
+        "fin-" + s.finish;
 
-    var shapeInner = "";
-
-    if (s.shape === "round") {
-      shapeInner = [
-        glossDefs,
-        '<circle cx="140" cy="140" r="118" fill="white" stroke="#DFD8C8" stroke-width="2"/>',
-        '<circle cx="140" cy="140" r="104" fill="' + fill + '"/>',
-        glossLayer,
-        '<text x="140" y="136" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="' + textFill + '">YOUR</text>',
-        '<text x="140" y="164" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="' + textFill + '">BRAND</text>'
-      ].join("");
-    } else if (s.shape === "square") {
-      var rx = s.material === "paper" ? "20" : "8";
-      shapeInner = [
-        glossDefs,
-        '<rect x="22" y="22" width="236" height="236" rx="' + (Number(rx) + 6) + '" fill="white" stroke="#DFD8C8" stroke-width="2"/>',
-        '<rect x="38" y="38" width="204" height="204" rx="' + rx + '" fill="' + fill + '"/>',
-        s.finish === "gloss" ? '<rect x="38" y="38" width="204" height="120" rx="' + rx + '" fill="url(#pvGloss)"/>' : "",
-        '<defs>' + (s.finish === "gloss" ? '<linearGradient id="pvGloss" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.55)"/><stop offset="60%" stop-color="rgba(255,255,255,0)"/></linearGradient>' : '') + '</defs>',
-        '<text x="140" y="136" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="' + textFill + '">YOUR</text>',
-        '<text x="140" y="164" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="28" fill="' + textFill + '">BRAND</text>'
-      ].join("");
-    } else {
-      // Die-cut blob
-      shapeInner = [
-        glossDefs,
-        '<path d="M140 15 C190 15 260 65 265 130 C270 195 225 255 170 268 C140 276 108 272 85 255 C45 228 18 178 22 125 C26 60 90 15 140 15 Z" fill="white" stroke="#DFD8C8" stroke-width="2"/>',
-        '<path d="M140 32 C184 32 246 76 250 132 C254 186 214 238 166 250 C138 257 109 253 89 238 C53 214 30 168 33 122 C37 64 96 32 140 32 Z" fill="' + fill + '"/>',
-        s.finish === "gloss" ? '<ellipse cx="110" cy="90" rx="60" ry="36" fill="rgba(255,255,255,0.2)" transform="rotate(-15,110,90)"/>' : "",
-        '<text x="140" y="136" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="24" fill="' + textFill + '">YOUR</text>',
-        '<text x="140" y="162" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-size="24" fill="' + textFill + '">BRAND</text>'
-      ].join("");
+      // Size transform
+      studioWrapper.style.transform = sizeScales[s.size] || "scale(1)";
     }
 
-    // Clear label: show transparency background
-    var stageBg = s.material === "clear"
-      ? "rgba(210,225,218,0.5)"
-      : bg;
+    if (studioStage) {
+      var bg = matBg[s.material] || "#F6F3EC";
+      if (s.material === "clear") {
+        studioStage.style.background = bg;
+      } else {
+        studioStage.style.background = bg;
+      }
+    }
 
-    var sizeScales = { small: "scale(0.85)", medium: "scale(1)", large: "scale(1.15)" };
-
+    // SVG backwards compatibility if present
     if (previewSvg) {
-      previewSvg.innerHTML = shapeInner;
       previewSvg.style.transform = sizeScales[s.size] || "scale(1)";
     }
-    var stage = document.getElementById("studioPreviewStage");
-    if (stage) stage.style.background = stageBg;
   }
 
   function updateSpecPanel() {
@@ -831,7 +797,7 @@
         studioState[ctrl] = val;
 
         // Update preview + spec
-        buildPreviewSvg();
+        updateStudioPreview();
         updateSpecPanel();
       });
 
@@ -844,7 +810,7 @@
     });
 
     // Initial render
-    buildPreviewSvg();
+    updateStudioPreview();
     updateSpecPanel();
   }
 

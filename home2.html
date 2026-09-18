@@ -90,6 +90,10 @@
      Stacks on tablet / mobile.
      =========================================================== -->
 <section class="h2-hero-fixed" aria-label="StickPro Studio Hero">
+  <video class="h2-hero-bg-video" autoplay muted loop playsinline poster="Assets/Home2/home1.jpg">
+    <source src="Assets/Home2/hero.mp4" type="video/mp4">
+  </video>
+  <div class="h2-hero-video-overlay"></div>
   <div class="h2-hero-centered reveal">
     <span class="h2-kicker">StickPro Material Studio</span>
     <h1>Turn Your Idea Into Something People Can <span class="h2-accent">Touch.</span></h1>
@@ -252,8 +256,12 @@
 
       <!-- Central Preview -->
       <div class="h2-studio-preview">
-        <div class="h2-preview-stage" id="studioPreviewStage" style="display:flex; align-items:center; justify-content:center; padding:24px; min-height:300px; border-radius:16px; background:#F6F3EC; transition:background .3s ease;">
-          <svg id="studioPreviewSvg" viewBox="0 0 280 280" width="260" height="260" aria-label="Interactive sticker preview" role="img" style="filter:drop-shadow(0 14px 28px rgba(0,0,0,0.18)); transition:transform .3s ease;"></svg>
+        <div class="h2-preview-stage" id="studioPreviewStage">
+          <div class="h2-sticker-mockup-wrapper is-round is-vinyl is-matte" id="studioStickerWrapper" aria-label="Custom sticker interactive prototype">
+            <img id="studioPreviewImg" src="Assets/Home2/custom_sticker_preview.png" alt="Custom sticker preview" class="h2-preview-sticker-img">
+            <div class="h2-sticker-gloss-sheen" id="studioGlossSheen" aria-hidden="true"></div>
+            <div class="h2-sticker-kisscut-border" aria-hidden="true"></div>
+          </div>
         </div>
         <div class="h2-preview-label">Live visual prototype — custom sticker specifications</div>
       </div>
@@ -397,7 +405,7 @@
 
       <!-- Wide: Cut edge -->
       <div class="h2-detail-item">
-        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80" alt="Laser die-cut edge precision macro" loading="lazy">
+        <img src="Assets/Home2/detail_cut_edge.jpg" alt="Laser die-cut edge precision macro" loading="lazy">
         <div class="h2-detail-caption">
           <span class="h2-detail-code">CUT</span>
           <span class="h2-detail-name">01 — Laser Die-Cut Edge</span>
@@ -406,7 +414,7 @@
 
       <!-- Tall: Surface texture -->
       <div class="h2-detail-item">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Matte laminate textured finish macro" loading="lazy">
+        <img src="Assets/Home2/detail_matte_surface.jpg" alt="Matte laminate textured finish macro" loading="lazy">
         <div class="h2-detail-caption">
           <span class="h2-detail-code">SURFACE</span>
           <span class="h2-detail-name">02 — Matte Laminate</span>
@@ -415,7 +423,7 @@
 
       <!-- Square: Print detail -->
       <div class="h2-detail-item">
-        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80" alt="1200 DPI razor-sharp print output macro" loading="lazy">
+        <img src="Assets/Home2/detail_dpi_print.jpg" alt="1200 DPI razor-sharp print output macro" loading="lazy">
         <div class="h2-detail-caption">
           <span class="h2-detail-code">PRINT</span>
           <span class="h2-detail-name">03 — 1200 DPI Output</span>
@@ -472,7 +480,7 @@
       <!-- Item 1: Illustrated sticker -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=600&q=80" alt="Flora Botanicals custom round sticker" loading="lazy">
+          <img src="Assets/Home2/home1.jpg" alt="Flora Botanicals custom round sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Flora Botanicals
           <div class="h2-creator-item-sub">Round · Clear label</div>
@@ -482,7 +490,7 @@
       <!-- Item 2: Bold typography sticker -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" alt="Wave Records square vinyl sticker" loading="lazy">
+          <img src="Assets/Home2/home2.jpg" alt="Wave Records square vinyl sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Wave Records
           <div class="h2-creator-item-sub">Square · Matte vinyl</div>
@@ -492,7 +500,7 @@
       <!-- Item 3: Die-cut custom shape -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1589384267710-7a25be158656?auto=format&fit=crop&w=600&q=80" alt="Harvest Honey Co custom die-cut sticker" loading="lazy">
+          <img src="Assets/Home2/home3.jpg" alt="Harvest Honey Co custom die-cut sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Harvest Honey Co.
           <div class="h2-creator-item-sub">Die-cut · Matte paper</div>
@@ -502,7 +510,7 @@
       <!-- Item 4: Event badge -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="MakerFest Event hex badge sticker" loading="lazy">
+          <img src="Assets/Home2/home4.jpg" alt="MakerFest Event hex badge sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">MakerFest Event
           <div class="h2-creator-item-sub">Die-cut hex · Gloss vinyl</div>
@@ -512,7 +520,7 @@
       <!-- Item 5: Laptop sticker -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?auto=format&fit=crop&w=600&q=80" alt="Circuit Lab weatherproof laptop sticker" loading="lazy">
+          <img src="Assets/Home2/home5.jpg" alt="Circuit Lab weatherproof laptop sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Circuit Lab
           <div class="h2-creator-item-sub">Round · Weatherproof vinyl</div>
@@ -522,7 +530,7 @@
       <!-- Item 6: Small business logo -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80" alt="Ember Candles soft-touch rectangle label" loading="lazy">
+          <img src="Assets/Home2/home6.jpg" alt="Ember Candles soft-touch rectangle label" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Ember Candles
           <div class="h2-creator-item-sub">Rectangle · Soft-touch matte</div>
@@ -532,7 +540,7 @@
       <!-- Item 7: Limited edition -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Nova Studio holographic foil sticker" loading="lazy">
+          <img src="Assets/Home2/home7.jpg" alt="Nova Studio holographic foil sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Nova Studio
           <div class="h2-creator-item-sub">Round · Holographic foil</div>
@@ -542,7 +550,7 @@
       <!-- Item 8: Geometric -->
       <div class="h2-creator-item" role="listitem">
         <div class="h2-creator-img-wrap">
-          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Summit Spirits gloss vinyl geometric sticker" loading="lazy">
+          <img src="Assets/Home2/home8.jpg" alt="Summit Spirits gloss vinyl geometric sticker" loading="lazy">
         </div>
         <div class="h2-creator-item-cap">Summit Spirits
           <div class="h2-creator-item-sub">Die-cut oct · Gloss vinyl</div>
