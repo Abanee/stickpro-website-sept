@@ -1313,7 +1313,7 @@ body.nav-open .nav-toggle svg line:nth-child(3) {
     grid-column: 1;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 24px;
+    padding: 32px 36px;
   }
   .biz-4-img-wrap {
     width: 100%;
@@ -2881,12 +2881,14 @@ html[data-theme="dark"] .trust-row:hover .trust-icon-box {
   margin-top: 0;
 }
 .product-nav-track{
-  display:flex; gap:8px; overflow-x:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   padding: 14px var(--page-pad);
-  max-width: var(--content-max); margin:0 auto;
-  scrollbar-width: none;
+  max-width: var(--content-max);
+  margin: 0 auto;
 }
-.product-nav-track::-webkit-scrollbar{ display:none; }
 .product-nav-item{
   flex:0 0 auto; display:flex; align-items:center; gap:8px;
   padding: 9px 16px; border-radius:999px; border:1px solid var(--border);
@@ -3275,12 +3277,15 @@ html[data-theme="dark"] .final-cta--dark .btn-primary:hover{
 .mat-inspector-info .btn{ align-self:flex-start; }
 
 @media (max-width: 1024px){
-  .mat-inspector{ grid-template-columns:1fr; gap:36px; }
-  .mat-inspector-visual{ min-height: 340px; aspect-ratio: 16/9; }
+  .mat-inspector{ grid-template-columns:1fr; gap:36px; max-width: 100%; }
+  .mat-inspector-visual{ min-height: unset; width: 100%; max-width: 100%; aspect-ratio: 16 / 10; }
 }
 @media (max-width: 560px){
+  .mat-inspector{ max-width: 100%; overflow: hidden; }
+  .mat-inspector-visual{ aspect-ratio: 4 / 3; min-height: unset; width: 100%; max-width: 100%; }
   .mat-spec-grid{ grid-template-columns: 1fr; }
 }
+
 
 /* --- Matte vs Gloss comparison --- */
 .mg-compare{
@@ -3679,7 +3684,7 @@ html[data-theme="dark"] .decision-help strong{ color: var(--text-primary); }
 .mat-final-cta{
   background: 
     linear-gradient(135deg, rgba(14, 16, 20, 0.90) 0%, rgba(20, 24, 30, 0.84) 55%, rgba(225, 59, 46, 0.28) 100%),
-    url('Assets/Banner/cta_bg.jpg') center/cover no-repeat;
+    url('Assets/Banner/materials_cta_bg.jpg') center/cover no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-l);
   padding: 72px 64px;
@@ -3726,7 +3731,7 @@ html[data-theme="dark"] .decision-help strong{ color: var(--text-primary); }
 html[data-theme="dark"] .mat-final-cta{
   background: 
     linear-gradient(135deg, rgba(10, 12, 16, 0.92) 0%, rgba(16, 20, 26, 0.86) 55%, rgba(225, 59, 46, 0.25) 100%),
-    url('Assets/Banner/cta_bg.jpg') center/cover no-repeat;
+    url('Assets/Banner/materials_cta_bg.jpg') center/cover no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 24px 60px rgba(0,0,0,.55);
 }
@@ -6034,19 +6039,44 @@ html[data-theme="dark"] .h2-proof-avatar{
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+/* Responsive adjustments for Auth */
+@media (max-width: 560px) {
   .auth-wrapper {
-    padding: 16px 12px;
+    padding: 60px 14px 24px;
+    align-items: flex-start;
   }
   .auth-card {
-    padding: 20px 16px;
+    padding: 26px 18px;
+    border-radius: 14px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .social-auth-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .auth-title {
+    font-size: 23px;
+  }
+  .auth-quick-utils {
+    top: 14px;
+    inset-inline-end: 14px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-wrapper {
+    padding: 60px 12px 20px;
+  }
+  .auth-card {
+    padding: 22px 16px;
     border-radius: 12px;
     box-shadow: var(--shadow);
   }
   .auth-quick-utils {
     top: 12px;
     inset-inline-end: 12px;
-    gap: 6px;
   }
   .social-auth-grid {
     gap: 8px;
@@ -6092,25 +6122,6 @@ html[data-theme="dark"] .auth-alert-success {
   background: rgba(54, 133, 110, 0.18);
   color: #5ec2a5;
   border-color: rgba(54, 133, 110, 0.35);
-}
-
-/* Responsive adjustments */
-@media (max-width: 520px) {
-  .auth-card {
-    padding: 32px 22px;
-    border-radius: 14px;
-  }
-  .social-auth-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .auth-title {
-    font-size: 23px;
-  }
-  .auth-quick-utils {
-    top: 14px;
-    inset-inline-end: 14px;
-  }
 }
 
 /* ==========================================================================
@@ -6791,7 +6802,9 @@ html[data-theme="dark"] .auth-alert-success {
 .calc-qty-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  row-gap: 32px;
+  column-gap: 12px;
+  margin-top: 14px;
   margin-bottom: 28px;
 }
 
@@ -7075,7 +7088,9 @@ html[data-theme="dark"] .auth-alert-success {
     padding: 24px 20px;
   }
   .calc-qty-pills {
-    gap: 8px;
+    row-gap: 34px !important;
+    column-gap: 10px !important;
+    margin-top: 14px;
   }
   .calc-pill {
     flex: 1 1 calc(33.333% - 8px);
@@ -8037,9 +8052,15 @@ html[dir="rtl"] #calcApplyBtn svg {
     gap: 16px;
   }
   .h2-note-top {
+    position: relative;
     top: auto;
-    bottom: -32px;
-    right: 0;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    margin: 14px 0 8px auto;
+    width: fit-content;
+    transform: rotate(-2deg);
+    display: flex;
   }
 }
 
